@@ -596,7 +596,7 @@ class CoordinateRequestAndResponseStage(PipelineStage):
                 logger.info(
                     "{}: ConnectedEvent: re-publishing request {}".format(self.name, request_id)
                 )
-                self.send_request_down(request_id, self.pending_responses[request_id])
+                self._send_request_down(request_id, self.pending_responses[request_id])
 
         else:
             self.send_event_up(event)

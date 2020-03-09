@@ -297,8 +297,10 @@ class MQTTTransport(object):
         # Finally, because of a bug in Paho, we need to null out the _thread pointer.  This
         # is necessary because the code that sets _thread to None only gets called if you
         # call loop_stop from an external thread (and we're still inside the Paho thread here).
+        if threading.current_thread() == self._mqtt_client._thread:
+            logger.debug("in paho thread.  nulling _thread")
+            self._mqtt_client._thread = None
 
-        self._mqtt_client._thread = None
         logger.debug("Done forcing paho disconnect")
 
     def _create_ssl_context(self):

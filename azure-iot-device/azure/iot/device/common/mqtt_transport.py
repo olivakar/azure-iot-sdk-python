@@ -286,13 +286,17 @@ class MQTTTransport(object):
         # loop_forever() function recomment calling disconnect() from a callback to exit the
         # Paho thread/loop.
 
-        self._mqtt_client.disconnect()
+        # rc = self._mqtt_client.disconnect()
+
+        # logger.info("disconnect complete ({}).  stopping loop".format(rc))
 
         # Calling disconnect() isn't enough.  We also need to call loop_stop to make sure
         # Paho is as clean as possible.  Our call to disconnect() above is enough to stop the
         # loop and exit the tread, but the call to loop_stop() is necessary to complete the cleanup.
 
         self._mqtt_client.loop_stop()
+
+        logger.info("Done stopping loop. thread = {}".format(self.mqtt_client._thread))
 
         # Finally, because of a bug in Paho, we need to null out the _thread pointer.  This
         # is necessary because the code that sets _thread to None only gets called if you

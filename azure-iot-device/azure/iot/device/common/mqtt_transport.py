@@ -427,6 +427,7 @@ class MQTTTransport(object):
             rc = self._mqtt_client.reconnect()
         except Exception as e:
             logger.info("reconnect raised {}".format(e))
+            logger.error(traceback.format_exc())
             self._stop_automatic_reconnect()
             raise exceptions.ConnectionDroppedError(
                 message="Unexpected Paho failure during reconnect", cause=e

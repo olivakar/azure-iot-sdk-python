@@ -296,7 +296,7 @@ class MQTTTransport(object):
 
         self._mqtt_client.loop_stop()
 
-        logger.info("Done stopping loop. thread = {}".format(self.mqtt_client._thread))
+        logger.info("Done stopping loop. thread = {}".format(self._mqtt_client._thread))
 
         # Finally, because of a bug in Paho, we need to null out the _thread pointer.  This
         # is necessary because the code that sets _thread to None only gets called if you

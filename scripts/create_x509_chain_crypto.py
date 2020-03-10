@@ -242,17 +242,129 @@ def before_cert_creation_from_pipeline():
     #     print("Configuration file have NOT been copied")
 
 
+def create_verficattion_cert(nonce, root_verify):
+    issuer_private_key = None
+    issuer_cert = None
+
+    if root_verify:
+        verification_password_file = "demoCACrypto/private/verfiication_ca_key.pem"
+        verfication_csr_file = "demoCACrypto/newcerts/verfiication_ca_csr.pem"
+        verfication_cert_file = "demoCACrypto/newcerts/verfiication_ca_cert.pem"
+        issuer_key_file = "demoCACrypto/private/ca_key.pem"
+        issuer_cert_file = "demoCACrypto/newcerts/ca_cert.pem"
+    else:
+        verification_password_file = "demoCACrypto/private/verfiication_inter_key.pem"
+        verfication_csr_file = "demoCACrypto/newcerts/verfiication_inter_csr.pem"
+        verfication_cert_file = "demoCACrypto/newcerts/verfiication_inter_cert.pem"
+        issuer_key_file = "demoCACrypto/private/intermediate_key.pem"
+        issuer_cert_file = "demoCACrypto/newcerts/intermediate_cert.pem"
+
+    with open(issuer_key_file, "r") as fh:
+        pem_data = fh.read()
+        issuer_private_key = x509.load_pem_x509_certificate(pem_data, default_backend())
+
+    with open(issuer_cert_file, "r") as fh:
+        pem_data = fh.read()
+        issuer_cert = x509.load_pem_x509_certificate(pem_data, default_backend())
+
+    verification_private_key = create_private_key(
+        password_file=verification_password_file, password=None, key_size=key_size
+    )
+    verification_csr = create_csr(
+        private_key=verification_private_key,
+        csr_file=verfication_csr_file,
+        subject=nonce,
+        is_ca=False,
+    )
+
+    verification_builder = create_cert_builder_for_verification(
+        subject=verification_csr.subject,
+        issuer_name=issuer_cert.subject,
+        public_key=verification_csr.public_key(),
+        is_ca=False,
+    )
+
+    verification_cert = verification_builder.sign(
+        private_key=issuer_private_key, algorithm=hashes.SHA256(), backend=default_backend()
+    )
+    with open(verfication_cert_file, "wb") as f:
+        f.write(verification_cert.public_bytes(serialization.Encoding.PEM))
+
+
+def create_cert_builder_for_verification(subject, issuer_name, public_key, is_ca=False):
+    builder = x509.CertificateBuilder()
+
+    builder = builder.subject_name(subject)
+    builder = builder.issuer_name(issuer_name)
+    builder = builder.public_key(public_key)
+    # builder = builder.not_valid_before(datetime.today())
+    # builder = builder.not_valid_after(datetime.today() + timedelta(days=days))
+    builder = builder.serial_number(int(uuid.uuid4()))
+    builder = builder.add_extension(
+        x509.BasicConstraints(ca=is_ca, path_length=None), critical=True
+    )
+    return builder
+
+
 if __name__ == "__main__":
-    # parser = argparse.ArgumentParser(description="Generate a certificate chain.")
-    # parser.add_argument("domain", help="Domain name or common name.")
+    parser = argparse.ArgumentParser(description="Generate a certificate chain.")
+    parser.add_argument("domain", help="Domain name or common name.")
     #
     # parser.add_argument(
     #     "--ca-password", type=str, help="CA key password. If omitted it will be prompted."
     # )
     #
-    # args = parser.parse_args()
-    #
-    # common_name = args.domain
+
+    parser.add_argument(
+        "--mode",
+        type=str,
+        help="The mode in which certificate is created. By default non-verification mode. For verification use 'verification'",
+    )
+
+    parser.add_argument(
+        "--root-verify",
+        type=str,
+        help="The boolean value to enter in case it is the root or intermediate verification. By default it is True meaning root verifictaion. If veriication of intermediate certification is needed please enter False ",
+    )
+
+    parser.add_argument(
+        "--nonce",
+        type=str,
+        help="thumprint generated from iot hub certificates. During verification mode if omitted it will be prompted.",
+    )
+
+    args = parser.parse_args()
+
+    common_name = args.domain
+
+    if args.mode:
+        if args.mode == "verification":
+            mode = "verification"
+        else:
+            raise ValueError(
+                "No other mode except verification is accepted. Default is non-verification"
+            )
+    else:
+        mode = "non-verification"
+
+    if mode == "non-verification":
+        pass
+    else:
+        if args.nonce:
+            nonce = args.nonce
+        else:
+            nonce = getpass.getpass("Enter nonce for verification mode")
+
+        # By default root verify is True unless specifically passed
+        if args.root_verify:
+            lower_root_verify = args.root_verify.lower()
+            if lower_root_verify == "false":
+                root_verify = False
+            else:
+                root_verify = True
+        else:
+            root_verify = True
+
     # if args.ca_password:
     #     ca_password = args.ca_password
     # else:
@@ -266,56 +378,46 @@ if __name__ == "__main__":
     # print(u_val)
     # print(str.encode(common_name).decode("utf-8"))
 
-    create_directories_and_prereq_files(False)
-    key_size = 4096
-    abs_common_name = "leviosa"
-    root_pass = "hogwarts"
-    inter_pass = "hogwartsi"
-    device_pass = "hogwartsd"
+    if mode == "non-verification":
+        create_verficattion_cert(nonce, root_verify)
+    else:
 
-    root_password_file = "demoCACrypto/private/ca_key.pem"
-    root_private_key = create_private_key(
-        password_file=root_password_file, password=root_pass, key_size=key_size
-    )
-    root_cert = create_root_ca_cert(
-        root_common_name="root" + abs_common_name, root_private_key=root_private_key, days=3650
-    )  # Arg parse password
+        create_directories_and_prereq_files(False)
+        key_size = 4096
+        abs_common_name = "leviosa"
+        root_pass = "hogwarts"
+        inter_pass = "hogwartsi"
+        device_pass = "hogwartsd"
 
-    intermediate_password_file = "demoCACrypto/private/intermediate_key.pem"
+        root_password_file = "demoCACrypto/private/ca_key.pem"
+        root_private_key = create_private_key(
+            password_file=root_password_file, password=root_pass, key_size=key_size
+        )
+        root_cert = create_root_ca_cert(
+            root_common_name="root" + abs_common_name, root_private_key=root_private_key, days=3650
+        )  # Arg parse password
 
-    intermediate_private_key = create_private_key(
-        password_file=intermediate_password_file, password=inter_pass, key_size=key_size
-    )
+        intermediate_password_file = "demoCACrypto/private/intermediate_key.pem"
 
-    intermediate_cert = create_intermediate_ca_cert(
-        root_cert=root_cert,
-        root_key=root_private_key,
-        intermediate_common_name="inter" + abs_common_name,
-        intermediate_private_key=intermediate_private_key,
-        key_size=4096,
-        days=3650,
-    )
+        intermediate_private_key = create_private_key(
+            password_file=intermediate_password_file, password=inter_pass, key_size=key_size
+        )
 
-    create_multiple_device_keys_and_certs(
-        number_of_devices=3,
-        inter_cert=intermediate_cert,
-        inter_key=intermediate_private_key,
-        device_common_name="device" + abs_common_name,
-        password=device_pass,
-        key_size=4096,
-        days=3650,
-    )
+        intermediate_cert = create_intermediate_ca_cert(
+            root_cert=root_cert,
+            root_key=root_private_key,
+            intermediate_common_name="inter" + abs_common_name,
+            intermediate_private_key=intermediate_private_key,
+            key_size=4096,
+            days=3650,
+        )
 
-    verification_password_file = "demoCACrypto/private/verfiication_ca_key.pem"
-    verfication_csr_file = "demoCACrypto/private/verfiication_ca_csr.pem"
-
-    # nonce = ""
-    # verification_key = create_private_key(password_file=verification_password_file, password=None, key_size=key_size)
-    # subject = x509.Name(
-    #             [
-    #                 # Provide various details about who we are.
-    #                 x509.NameAttribute(NameOID.COMMON_NAME, str.encode(nonce).decode("utf-8"))
-    #             ]
-    #         )
-    # verification_csr = create_csr(private_key=verification_key, csr_file=verfication_csr_file, subject=subject)
-    # verification_cert = create_cert_builder(subject=verification_csr.subject, issuer_name=root_cert.subject, public_key=verification_csr.public_key(), days=35)
+        create_multiple_device_keys_and_certs(
+            number_of_devices=3,
+            inter_cert=intermediate_cert,
+            inter_key=intermediate_private_key,
+            device_common_name="device" + abs_common_name,
+            password=device_pass,
+            key_size=4096,
+            days=3650,
+        )

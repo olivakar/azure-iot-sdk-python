@@ -440,6 +440,12 @@ class MQTTTransport(object):
             # or ProtocolClientError
             raise _create_error_from_rc_code(rc)
 
+        # There are race conditions inside Paho which require us to start the loop again.
+        # In particular, just because we were connected before this function was called, doesn't
+        # mean we didn't disconnect (and stop the loop) in the mean time.  loop_start is safe to
+        # call if the loop is already running, so we just always call it.
+        self._mqtt_client.loop_start()
+
     def disconnect(self):
         """
         Disconnect from the MQTT broker.

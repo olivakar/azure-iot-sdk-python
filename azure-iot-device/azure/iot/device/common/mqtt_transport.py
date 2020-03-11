@@ -264,7 +264,7 @@ class MQTTTransport(object):
         mqtt_client.on_publish = on_publish
         mqtt_client.on_message = on_message
 
-        mqtt_client.reconnect_delay_set(120)
+        mqtt_client.reconnect_delay_set(120 * 60)
 
         logger.debug("Created MQTT protocol client, assigned callbacks")
         return mqtt_client

@@ -426,9 +426,6 @@ class MQTTTransport(object):
         logger.info("reauthorizing MQTT client")
         self._mqtt_client.username_pw_set(username=self._username, password=password)
         try:
-            logger.info("start loop")
-            self._mqtt_client.loop_start()
-            logger.info("reconect")
             rc = self._mqtt_client.reconnect()
         except Exception as e:
             logger.info("reconnect raised {}".format(e))
@@ -442,14 +439,6 @@ class MQTTTransport(object):
             # This could result in ConnectionFailedError, ConnectionDroppedError, UnauthorizedError
             # or ProtocolClientError
             raise _create_error_from_rc_code(rc)
-
-        # There are race conditions inside Paho which require us to start the loop again.
-        # In particular, just because we were connected before this function was called, doesn't
-        # mean we didn't disconnect (and stop the loop) in the mean time.  loop_start is safe to
-        # call if the loop is already running, so we just always call it.
-        logger.info("start loop2")
-        self._mqtt_client.loop_start()
-        logger.info("done start loop2")
 
     def disconnect(self):
         """

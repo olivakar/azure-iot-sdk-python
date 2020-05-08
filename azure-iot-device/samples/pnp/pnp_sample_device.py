@@ -27,18 +27,24 @@ sdk_information_digital_twin_model_identifier = "dtmi:azure:Client:SDKInformatio
 # and the name user wants to call the pnp device
 model_id = "dtmi:my_company:com:SampleDevice;1"
 
-# defined component names according to interfaces following pascal case.
-device_information_component_name = device_information_digital_twin_model_identifier.split(":")[
-    3
-].split(";")[0]
-sdk_information_component_name = sdk_information_digital_twin_model_identifier.split(":")[3].split(
-    ";"
-)[0]
-print(device_information_component_name)
-print(sdk_information_component_name)
-# This is the only name that is not retrieved as the user can have multiple environmental sensors
-# in the sample device and it is the user's choice to name this component.
-sensor_component_name = "Sensor"
+filename = "sample_device.model.json"
+contents = None
+
+with open(filename, "r") as json_file:
+    data = json.load(json_file)
+    contents = data["contents"]
+
+# retrieve component names from model json file
+number_of_comps = len(data["contents"])
+for count in range(0, number_of_comps):
+    schema = contents[count]["schema"]
+    component_name = contents[count]["name"]
+    if schema == sensor_digital_twin_model_identifier:
+        sensor_component_name = component_name
+    elif schema == device_information_digital_twin_model_identifier:
+        device_information_component_name = component_name
+    elif schema == sdk_information_digital_twin_model_identifier:
+        sdk_information_component_name = component_name
 
 #####################################################
 # COMMAND HANDLERS : User will define these handlers

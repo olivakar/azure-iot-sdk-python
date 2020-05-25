@@ -12,9 +12,9 @@ import getpass
 
 PUBLIC_EXPONENT = 65537
 EXTENSION_NAME = ".pem"
-COMMON_DEVICE_PASSWORD_FILE = "demoCACrypto/private/device_key"
-COMMON_DEVICE_CSR_FILE = "demoCACrypto/newcerts/device_csr"
-COMMON_DEVICE_CERT_FILE = "demoCACrypto/newcerts/device_cert"
+COMMON_DEVICE_PASSWORD_FILE = "demoCA/private/device_key"
+COMMON_DEVICE_CSR_FILE = "demoCA/newcerts/device_csr"
+COMMON_DEVICE_CERT_FILE = "demoCA/newcerts/device_cert"
 
 
 def create_certificate_chain(
@@ -41,7 +41,7 @@ def create_certificate_chain(
     :param days: The number of days for which the certificate is valid. The default is 1 year or 365 days.
     For the root cert this value is multiplied by 10. For the device certificates this number will be divided by 10.
     """
-    root_password_file = "demoCACrypto/private/ca_key.pem"
+    root_password_file = "demoCA/private/ca_key.pem"
     root_private_key = create_private_key(
         password_file=root_password_file, password=ca_password, key_size=key_size
     )
@@ -49,7 +49,7 @@ def create_certificate_chain(
         root_common_name="root" + common_name, root_private_key=root_private_key, days=days
     )
 
-    intermediate_password_file = "demoCACrypto/private/intermediate_key.pem"
+    intermediate_password_file = "demoCA/private/intermediate_key.pem"
 
     intermediate_private_key = create_private_key(
         password_file=intermediate_password_file, password=intermediate_password, key_size=key_size
@@ -97,16 +97,12 @@ def create_private_key(password_file, password=None, key_size=4096):
 
 
 def create_root_ca_cert(root_common_name, root_private_key, days=3650):
-    file_root_certificate = "demoCACrypto/newcerts/ca_cert.pem"
+    file_root_certificate = "demoCA/newcerts/ca_cert.pem"
 
     root_public_key = root_private_key.public_key()
 
     subject = x509.Name(
-        [
-            x509.NameAttribute(
-                NameOID.COMMON_NAME, str.encode(root_common_name).decode("utf-8")
-            )  # unicode(common_name, "utf-8")
-        ]
+        [x509.NameAttribute(NameOID.COMMON_NAME, str.encode(root_common_name).decode("utf-8"))]
     )
 
     builder = create_cert_builder(
@@ -125,8 +121,8 @@ def create_root_ca_cert(root_common_name, root_private_key, days=3650):
 def create_intermediate_ca_cert(
     root_cert, root_key, intermediate_common_name, intermediate_private_key, days=3650
 ):
-    file_intermediate_certificate = "demoCACrypto/newcerts/intermediate_cert.pem"
-    file_intermediate_csr = "demoCACrypto/newcerts/intermediate_csr.pem"
+    file_intermediate_certificate = "demoCA/newcerts/intermediate_cert.pem"
+    file_intermediate_csr = "demoCA/newcerts/intermediate_csr.pem"
 
     intermediate_csr = create_csr(
         private_key=intermediate_private_key,
@@ -230,20 +226,20 @@ def create_directories_and_prereq_files(pipeline):
     This function creates the necessary directories and files. This needs to be called as the first step before doing anything.
     :param pipeline: The boolean representing if function has been called from pipeline or not. True for pipeline, False for calling like a script.
     """
-    os.system("mkdir demoCACrypto")
+    os.system("mkdir demoCA")
     if pipeline:
         # This command does not work when we run locally. So we have to pass in the pipeline variable
-        os.system("touch demoCACrypto/index.txt")
+        os.system("touch demoCA/index.txt")
     else:
-        os.system("type nul > demoCACrypto/index.txt")
+        os.system("type nul > demoCA/index.txt")
         # TODO Do we need this
-        # os.system("type nul > demoCACrypto/index.txt.attr")
+        # os.system("type nul > demoCA/index.txt.attr")
 
-    os.system("echo 1000 > demoCACrypto/serial")
+    os.system("echo 1000 > demoCA/serial")
     # Create this folder as configuration file makes new keys go here
-    os.mkdir("demoCACrypto/private")
+    os.mkdir("demoCA/private")
     # Create this folder as configuration file makes new certificates go here
-    os.mkdir("demoCACrypto/newcerts")
+    os.mkdir("demoCA/newcerts")
 
 
 def before_cert_creation_from_pipeline():
@@ -255,31 +251,22 @@ def before_cert_creation_from_pipeline():
     """
     create_directories_and_prereq_files(True)
 
-    # shutil.copy("config/openssl.cnf", "demoCACrypto/openssl.cnf")
-    #
-    # if os.path.exists("demoCACrypto/openssl.cnf"):
-    #     print("Configuration file have been copied")
-    # else:
-    #     print("Configuration file have NOT been copied")
-
 
 def create_verification_cert(nonce, issuer_password, root_verify=False, key_size=4096):
-    issuer_private_key = None
-    issuer_cert = None
     encoded_issuer_password = str.encode(issuer_password)
 
     if root_verify:
-        verification_password_file = "demoCACrypto/private/verfiication_ca_key.pem"
-        verfication_csr_file = "demoCACrypto/newcerts/verfiication_ca_csr.pem"
-        verfication_cert_file = "demoCACrypto/newcerts/verfiication_ca_cert.pem"
-        issuer_key_file = "demoCACrypto/private/ca_key.pem"
-        issuer_cert_file = "demoCACrypto/newcerts/ca_cert.pem"
+        verification_password_file = "demoCA/private/verfiication_ca_key.pem"
+        verfication_csr_file = "demoCA/newcerts/verfiication_ca_csr.pem"
+        verfication_cert_file = "demoCA/newcerts/verfiication_ca_cert.pem"
+        issuer_key_file = "demoCA/private/ca_key.pem"
+        issuer_cert_file = "demoCA/newcerts/ca_cert.pem"
     else:
-        verification_password_file = "demoCACrypto/private/verfiication_inter_key.pem"
-        verfication_csr_file = "demoCACrypto/newcerts/verfiication_inter_csr.pem"
-        verfication_cert_file = "demoCACrypto/newcerts/verfiication_inter_cert.pem"
-        issuer_key_file = "demoCACrypto/private/intermediate_key.pem"
-        issuer_cert_file = "demoCACrypto/newcerts/intermediate_cert.pem"
+        verification_password_file = "demoCA/private/verfiication_inter_key.pem"
+        verfication_csr_file = "demoCA/newcerts/verfiication_inter_csr.pem"
+        verfication_cert_file = "demoCA/newcerts/verfiication_inter_cert.pem"
+        issuer_key_file = "demoCA/private/intermediate_key.pem"
+        issuer_cert_file = "demoCA/newcerts/intermediate_cert.pem"
 
     with open(issuer_key_file, "rb") as key_file:
         pem_data = key_file.read()
@@ -390,7 +377,6 @@ if __name__ == "__main__":
     if args.mode:
         if args.mode == "verification":
             mode = "verification"
-            print("In verification mode...........")
         else:
             raise ValueError(
                 "No other mode except verification is accepted. Default is non-verification"
@@ -444,7 +430,7 @@ if __name__ == "__main__":
                 "Enter pass phrase for issuer certificate verification: "
             )
 
-    if os.path.exists("demoCACrypto/private/") and os.path.exists("demoCACrypto/newcerts/"):
+    if os.path.exists("demoCA/private/") and os.path.exists("demoCA/newcerts/"):
         print("demoCA already exists.")
     else:
         create_directories_and_prereq_files(False)

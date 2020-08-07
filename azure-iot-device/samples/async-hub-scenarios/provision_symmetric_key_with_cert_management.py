@@ -17,32 +17,33 @@ provisioning_host = os.getenv("PROVISIONING_HOST")
 id_scope = os.getenv("PROVISIONING_IDSCOPE")
 registration_id = os.getenv("PROVISIONING_REGISTRATION_ID")
 symmetric_key = os.getenv("PROVISIONING_SYMMETRIC_KEY")
-x509_key_file = "device_key.pem"
+x509_key_file = os.getenv("X509_KEY_FILE")
 passphrase = os.getenv("PASS_PHRASE")
 x509_key_content = None
 x509_cert_file = "device_cert.pem"
 
 
 async def main():
+    # here my the mere presence of the kwarg with the private key we will know that the choice is cert management
+    with open(x509_key_file, "rb") as kf:
+        key_content = kf.read()
 
-    # OPTION 2 : When we generate the key ######
     provisioning_device_client = ProvisioningDeviceClient.create_from_symmetric_key(
-        provisioning_host, registration_id, id_scope, symmetric_key, use_cert_management=True
+        provisioning_host, registration_id, id_scope, symmetric_key, cert_management_key=key_content
     )
 
+    # custom payload defined by the user
+    properties = {"House": "Gryffindor", "Muggle-Born": "False"}
+    provisioning_device_client.provisioning_payload = properties
     registration_result = await provisioning_device_client.register()
 
     print("The complete registration result is")
     print(registration_result.registration_state)
 
     cert_content = registration_result.certificate_data
-    key_content = registration_result.key_data
 
     with open(x509_cert_file, "wb") as cf:
         cf.write(cert_content)
-
-    with open(x509_key_file, "wb") as kf:
-        kf.write(key_content)
 
     if registration_result.status == "assigned":
         print("Will send telemetry from the provisioned device")

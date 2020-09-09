@@ -167,12 +167,12 @@ class MQTTTransport(object):
         # Configure TLS/SSL
         ssl_context = self._create_ssl_context()
         mqtt_client.tls_set_context(context=ssl_context)
-
+        mqtt_client.tls_insecure_set(True)
         # Set event handlers.  Use weak references back into this object to prevent
         # leaks on Python 2.7.  See callable_weak_method.py and PEP 442 for explanation.
         #
         # We don't use the CallableWeakMethod object here because these handlers
-        # are not methods.
+        # are not methods.xx
         self_weakref = weakref.ref(self)
 
         def on_connect(client, userdata, flags, rc):
@@ -323,6 +323,7 @@ class MQTTTransport(object):
         This method creates the SSLContext object used by Paho to authenticate the connection.
         """
         logger.debug("creating a SSL context")
+        # ssl_context = ssl._create_unverified_context()
         ssl_context = ssl.SSLContext(protocol=ssl.PROTOCOL_TLSv1_2)
 
         if self._server_verification_cert:
@@ -348,8 +349,10 @@ class MQTTTransport(object):
                 self._x509_cert.pass_phrase,
             )
 
-        ssl_context.verify_mode = ssl.CERT_REQUIRED
-        ssl_context.check_hostname = True
+        # TODO Change to CERT_REQUIRED
+        # TODO Change to check_hostname True
+        # ssl_context.verify_mode = ssl.CERT_NONE
+        # ssl_context.check_hostname = False
 
         return ssl_context
 

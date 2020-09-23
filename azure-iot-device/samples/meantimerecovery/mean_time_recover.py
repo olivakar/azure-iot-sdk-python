@@ -7,9 +7,11 @@ from time import perf_counter
 import threading
 from multiprocessing import Value, Process
 
+
+FACTOR_OF_KEEP_ALIVE = 0.5
+MQTT_BROKER_RESTART_COUNT = 5
 elapsed_times = []
 container = None
-MQTT_BROKER_RESTART_COUNT = 5
 CONTAINER_NAME = "leaky-cauldron"
 
 
@@ -117,7 +119,7 @@ def start_timer(duration, restart_count, signal_to_quit):
 async def main():
     # Scenario based values
     keep_alive = 30
-    dead_duration = keep_alive / 2
+    dead_duration = keep_alive * FACTOR_OF_KEEP_ALIVE
     run_duration = 30
 
     # Inter process values

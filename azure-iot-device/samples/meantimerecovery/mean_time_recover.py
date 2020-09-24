@@ -8,11 +8,17 @@ import threading
 from multiprocessing import Value, Process
 
 
+# Scenario based values
+KEEP_ALIVE = 18
 FACTOR_OF_KEEP_ALIVE = 0.5
-MQTT_BROKER_RESTART_COUNT = 5
+KEEP_RUNNING = 10
+KEEP_DEAD = int(KEEP_ALIVE * FACTOR_OF_KEEP_ALIVE)
+
+MQTT_BROKER_RESTART_COUNT = 2
+CONTAINER_NAME = "leaky-cauldron"
+
 elapsed_times = []
 container = None
-CONTAINER_NAME = "leaky-cauldron"
 
 
 def control_container(
@@ -76,7 +82,7 @@ async def send_test_message(device_client, restart_count):
         elapsed_times.append(elapsed_time)
         print("done sending message #" + str(i))
         i = i + 1
-        await asyncio.sleep(3)
+        await asyncio.sleep(1)
         val = restart_count.value
         if val >= MQTT_BROKER_RESTART_COUNT:
             print(
@@ -104,7 +110,7 @@ def start_timer(duration, restart_count, signal_to_quit):
             needs_restart = False
         control_container(
             CONTAINER_NAME,
-            keep_running=30,
+            keep_running=KEEP_RUNNING,
             keep_dead=duration,
             restart_count=restart_count,
             signal_to_quit=signal_to_quit,
@@ -118,9 +124,6 @@ def start_timer(duration, restart_count, signal_to_quit):
 
 async def main():
     # Scenario based values
-    keep_alive = 30
-    dead_duration = keep_alive * FACTOR_OF_KEEP_ALIVE
-    run_duration = 30
 
     # Inter process values
     times_container_restart = Value("i", 0)
@@ -128,14 +131,15 @@ async def main():
 
     process_docker = Process(
         target=control_container,
-        args=(CONTAINER_NAME, run_duration, dead_duration, times_container_restart, signal_to_quit),
+        args=(CONTAINER_NAME, KEEP_RUNNING, KEEP_DEAD, times_container_restart, signal_to_quit),
     )
     process_docker.start()
 
+    # Do not delete sleep from here. Server needs some time to start.
     await asyncio.sleep(5)
     conn_str = "HostName=localhost;DeviceId=devicemtr;SharedAccessKey=Zm9vYmFy"
     device_client = IoTHubDeviceClient.create_from_connection_string(
-        conn_str, keep_alive=keep_alive
+        conn_str, keep_alive=KEEP_ALIVE
     )
 
     await device_client.connect()

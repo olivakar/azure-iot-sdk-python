@@ -1,0 +1,5289 @@
+{
+  "digestFormatVersion": 1,
+  "dtdlVersion": 2,
+  "contexts": {
+    "dtmi:dtdl:context;2": {
+      "Array": "dtmi:dtdl:class:Array;2",
+      "Boolean": "dtmi:dtdl:class:Boolean;2",
+      "ComplexSchema": "dtmi:dtdl:class:ComplexSchema;2",
+      "Command": "dtmi:dtdl:class:Command;2",
+      "CommandPayload": "dtmi:dtdl:class:CommandPayload;2",
+      "CommandType": "dtmi:dtdl:class:CommandType;2",
+      "Component": "dtmi:dtdl:class:Component;2",
+      "Content": "dtmi:dtdl:class:Content;2",
+      "Date": "dtmi:dtdl:class:Date;2",
+      "DateTime": "dtmi:dtdl:class:DateTime;2",
+      "Double": "dtmi:dtdl:class:Double;2",
+      "Duration": "dtmi:dtdl:class:Duration;2",
+      "Entity": "dtmi:dtdl:class:Entity;2",
+      "Enum": "dtmi:dtdl:class:Enum;2",
+      "EnumValue": "dtmi:dtdl:class:EnumValue;2",
+      "Field": "dtmi:dtdl:class:Field;2",
+      "Float": "dtmi:dtdl:class:Float;2",
+      "Integer": "dtmi:dtdl:class:Integer;2",
+      "Interface": "dtmi:dtdl:class:Interface;2",
+      "Long": "dtmi:dtdl:class:Long;2",
+      "Map": "dtmi:dtdl:class:Map;2",
+      "MapKey": "dtmi:dtdl:class:MapKey;2",
+      "MapValue": "dtmi:dtdl:class:MapValue;2",
+      "NamedEntity": "dtmi:dtdl:class:NamedEntity;2",
+      "NumericSchema": "dtmi:dtdl:class:NumericSchema;2",
+      "Object": "dtmi:dtdl:class:Object;2",
+      "PrimitiveSchema": "dtmi:dtdl:class:PrimitiveSchema;2",
+      "Property": "dtmi:dtdl:class:Property;2",
+      "Relationship": "dtmi:dtdl:class:Relationship;2",
+      "Schema": "dtmi:dtdl:class:Schema;2",
+      "SchemaField": "dtmi:dtdl:class:SchemaField;2",
+      "SemanticType": "dtmi:dtdl:class:SemanticType;2",
+      "SemanticUnit": "dtmi:dtdl:class:SemanticUnit;2",
+      "String": "dtmi:dtdl:class:String;2",
+      "Telemetry": "dtmi:dtdl:class:Telemetry;2",
+      "TemporalSchema": "dtmi:dtdl:class:TemporalSchema;2",
+      "Time": "dtmi:dtdl:class:Time;2",
+      "Unit": "dtmi:dtdl:class:Unit;2",
+      "UnitAttribute": "dtmi:dtdl:class:UnitAttribute;2",
+      "RatioUnit": "dtmi:standard:class:RatioUnit;2",
+      "DecimalUnit": "dtmi:standard:class:DecimalUnit;2",
+      "DecimalPrefix": "dtmi:standard:class:DecimalPrefix;2",
+      "BinaryUnit": "dtmi:standard:class:BinaryUnit;2",
+      "BinaryPrefix": "dtmi:standard:class:BinaryPrefix;2",
+      "QuantitativeType": "dtmi:standard:class:QuantitativeType;2",
+      "Acceleration": "dtmi:standard:class:Acceleration;2",
+      "Angle": "dtmi:standard:class:Angle;2",
+      "AngularAcceleration": "dtmi:standard:class:AngularAcceleration;2",
+      "AngularVelocity": "dtmi:standard:class:AngularVelocity;2",
+      "Area": "dtmi:standard:class:Area;2",
+      "Capacitance": "dtmi:standard:class:Capacitance;2",
+      "Current": "dtmi:standard:class:Current;2",
+      "DataRate": "dtmi:standard:class:DataRate;2",
+      "DataSize": "dtmi:standard:class:DataSize;2",
+      "Density": "dtmi:standard:class:Density;2",
+      "Distance": "dtmi:standard:class:Distance;2",
+      "ElectricCharge": "dtmi:standard:class:ElectricCharge;2",
+      "Energy": "dtmi:standard:class:Energy;2",
+      "Force": "dtmi:standard:class:Force;2",
+      "Frequency": "dtmi:standard:class:Frequency;2",
+      "Humidity": "dtmi:standard:class:Humidity;2",
+      "Illuminance": "dtmi:standard:class:Illuminance;2",
+      "Inductance": "dtmi:standard:class:Inductance;2",
+      "Latitude": "dtmi:standard:class:Latitude;2",
+      "Longitude": "dtmi:standard:class:Longitude;2",
+      "Length": "dtmi:standard:class:Length;2",
+      "Luminance": "dtmi:standard:class:Luminance;2",
+      "Luminosity": "dtmi:standard:class:Luminosity;2",
+      "LuminousFlux": "dtmi:standard:class:LuminousFlux;2",
+      "LuminousIntensity": "dtmi:standard:class:LuminousIntensity;2",
+      "MagneticFlux": "dtmi:standard:class:MagneticFlux;2",
+      "MagneticInduction": "dtmi:standard:class:MagneticInduction;2",
+      "Mass": "dtmi:standard:class:Mass;2",
+      "MassFlowRate": "dtmi:standard:class:MassFlowRate;2",
+      "Power": "dtmi:standard:class:Power;2",
+      "Pressure": "dtmi:standard:class:Pressure;2",
+      "RelativeHumidity": "dtmi:standard:class:RelativeHumidity;2",
+      "Resistance": "dtmi:standard:class:Resistance;2",
+      "SoundPressure": "dtmi:standard:class:SoundPressure;2",
+      "Temperature": "dtmi:standard:class:Temperature;2",
+      "Thrust": "dtmi:standard:class:Thrust;2",
+      "TimeSpan": "dtmi:standard:class:TimeSpan;2",
+      "Torque": "dtmi:standard:class:Torque;2",
+      "Velocity": "dtmi:standard:class:Velocity;2",
+      "Voltage": "dtmi:standard:class:Voltage;2",
+      "Volume": "dtmi:standard:class:Volume;2",
+      "VolumeFlowRate": "dtmi:standard:class:VolumeFlowRate;2",
+      "AccelerationUnit": "dtmi:standard:class:AccelerationUnit;2",
+      "AngleUnit": "dtmi:standard:class:AngleUnit;2",
+      "AngularAccelerationUnit": "dtmi:standard:class:AngularAccelerationUnit;2",
+      "AngularVelocityUnit": "dtmi:standard:class:AngularVelocityUnit;2",
+      "AreaUnit": "dtmi:standard:class:AreaUnit;2",
+      "CapacitanceUnit": "dtmi:standard:class:CapacitanceUnit;2",
+      "ChargeUnit": "dtmi:standard:class:ChargeUnit;2",
+      "CurrentUnit": "dtmi:standard:class:CurrentUnit;2",
+      "DataRateUnit": "dtmi:standard:class:DataRateUnit;2",
+      "DataSizeUnit": "dtmi:standard:class:DataSizeUnit;2",
+      "DensityUnit": "dtmi:standard:class:DensityUnit;2",
+      "EnergyUnit": "dtmi:standard:class:EnergyUnit;2",
+      "ForceUnit": "dtmi:standard:class:ForceUnit;2",
+      "FrequencyUnit": "dtmi:standard:class:FrequencyUnit;2",
+      "IlluminanceUnit": "dtmi:standard:class:IlluminanceUnit;2",
+      "InductanceUnit": "dtmi:standard:class:InductanceUnit;2",
+      "LengthUnit": "dtmi:standard:class:LengthUnit;2",
+      "LuminanceUnit": "dtmi:standard:class:LuminanceUnit;2",
+      "LuminousFluxUnit": "dtmi:standard:class:LuminousFluxUnit;2",
+      "LuminousIntensityUnit": "dtmi:standard:class:LuminousIntensityUnit;2",
+      "MagneticFluxUnit": "dtmi:standard:class:MagneticFluxUnit;2",
+      "MagneticInductionUnit": "dtmi:standard:class:MagneticInductionUnit;2",
+      "MassUnit": "dtmi:standard:class:MassUnit;2",
+      "MassFlowRateUnit": "dtmi:standard:class:MassFlowRateUnit;2",
+      "PowerUnit": "dtmi:standard:class:PowerUnit;2",
+      "PressureUnit": "dtmi:standard:class:PressureUnit;2",
+      "ResistanceUnit": "dtmi:standard:class:ResistanceUnit;2",
+      "SoundPressureUnit": "dtmi:standard:class:SoundPressureUnit;2",
+      "TemperatureUnit": "dtmi:standard:class:TemperatureUnit;2",
+      "TimeUnit": "dtmi:standard:class:TimeUnit;2",
+      "TorqueUnit": "dtmi:standard:class:TorqueUnit;2",
+      "Unitless": "dtmi:standard:class:Unitless;2",
+      "VelocityUnit": "dtmi:standard:class:VelocityUnit;2",
+      "VoltageUnit": "dtmi:standard:class:VoltageUnit;2",
+      "VolumeUnit": "dtmi:standard:class:VolumeUnit;2",
+      "VolumeFlowRateUnit": "dtmi:standard:class:VolumeFlowRateUnit;2",
+      "baseUnit": "dtmi:dtdl:property:baseUnit;2",
+      "bottomUnit": "dtmi:dtdl:property:bottomUnit;2",
+      "commandType": "dtmi:dtdl:property:commandType;2",
+      "comment": "dtmi:dtdl:property:comment;2",
+      "contents": "dtmi:dtdl:property:contents;2",
+      "description": "dtmi:dtdl:property:description;2",
+      "displayName": "dtmi:dtdl:property:displayName;2",
+      "elementSchema": "dtmi:dtdl:property:elementSchema;2",
+      "enumValue": "dtmi:dtdl:property:enumValue;2",
+      "enumValues": "dtmi:dtdl:property:enumValues;2",
+      "exponent": "dtmi:dtdl:property:exponent;2",
+      "extends": "dtmi:dtdl:property:extends;2",
+      "fields": "dtmi:dtdl:property:fields;2",
+      "languageVersion": "dtmi:dtdl:property:languageVersion;2",
+      "mapKey": "dtmi:dtdl:property:mapKey;2",
+      "mapValue": "dtmi:dtdl:property:mapValue;2",
+      "maxMultiplicity": "dtmi:dtdl:property:maxMultiplicity;2",
+      "minMultiplicity": "dtmi:dtdl:property:minMultiplicity;2",
+      "name": "dtmi:dtdl:property:name;2",
+      "prefix": "dtmi:dtdl:property:prefix;2",
+      "properties": "dtmi:dtdl:property:properties;2",
+      "request": "dtmi:dtdl:property:request;2",
+      "response": "dtmi:dtdl:property:response;2",
+      "schema": "dtmi:dtdl:property:schema;2",
+      "schemas": "dtmi:dtdl:property:schemas;2",
+      "symbol": "dtmi:dtdl:property:symbol;2",
+      "target": "dtmi:dtdl:property:target;2",
+      "topUnit": "dtmi:dtdl:property:topUnit;2",
+      "unit": "dtmi:dtdl:property:unit;2",
+      "valueSchema": "dtmi:dtdl:property:valueSchema;2",
+      "writable": "dtmi:dtdl:property:writable;2",
+      "asynchronous": "dtmi:dtdl:instance:CommandType:asynchronous;2",
+      "synchronous": "dtmi:dtdl:instance:CommandType:synchronous;2",
+      "boolean": "dtmi:dtdl:instance:Schema:boolean;2",
+      "date": "dtmi:dtdl:instance:Schema:date;2",
+      "dateTime": "dtmi:dtdl:instance:Schema:dateTime;2",
+      "double": "dtmi:dtdl:instance:Schema:double;2",
+      "duration": "dtmi:dtdl:instance:Schema:duration;2",
+      "float": "dtmi:dtdl:instance:Schema:float;2",
+      "integer": "dtmi:dtdl:instance:Schema:integer;2",
+      "long": "dtmi:dtdl:instance:Schema:long;2",
+      "string": "dtmi:dtdl:instance:Schema:string;2",
+      "time": "dtmi:dtdl:instance:Schema:time;2",
+      "deci": "dtmi:standard:unitprefix:deci;2",
+      "centi": "dtmi:standard:unitprefix:centi;2",
+      "milli": "dtmi:standard:unitprefix:milli;2",
+      "micro": "dtmi:standard:unitprefix:micro;2",
+      "nano": "dtmi:standard:unitprefix:nano;2",
+      "pico": "dtmi:standard:unitprefix:pico;2",
+      "femto": "dtmi:standard:unitprefix:femto;2",
+      "atto": "dtmi:standard:unitprefix:atto;2",
+      "zepto": "dtmi:standard:unitprefix:zepto;2",
+      "yocto": "dtmi:standard:unitprefix:yocto;2",
+      "deka": "dtmi:standard:unitprefix:deka;2",
+      "hecto": "dtmi:standard:unitprefix:hecto;2",
+      "kilo": "dtmi:standard:unitprefix:kilo;2",
+      "mega": "dtmi:standard:unitprefix:mega;2",
+      "giga": "dtmi:standard:unitprefix:giga;2",
+      "tera": "dtmi:standard:unitprefix:tera;2",
+      "peta": "dtmi:standard:unitprefix:peta;2",
+      "exa": "dtmi:standard:unitprefix:exa;2",
+      "zetta": "dtmi:standard:unitprefix:zetta;2",
+      "yotta": "dtmi:standard:unitprefix:yotta;2",
+      "kibi": "dtmi:standard:unitprefix:kibi;2",
+      "mebi": "dtmi:standard:unitprefix:mebi;2",
+      "gibi": "dtmi:standard:unitprefix:gibi;2",
+      "tebi": "dtmi:standard:unitprefix:tebi;2",
+      "pebi": "dtmi:standard:unitprefix:pebi;2",
+      "exbi": "dtmi:standard:unitprefix:exbi;2",
+      "zebi": "dtmi:standard:unitprefix:zebi;2",
+      "yobi": "dtmi:standard:unitprefix:yobi;2",
+      "metrePerSecondSquared": "dtmi:standard:unit:metrePerSecondSquared;2",
+      "centimetrePerSecondSquared": "dtmi:standard:unit:centimetrePerSecondSquared;2",
+      "gForce": "dtmi:standard:unit:gForce;2",
+      "radian": "dtmi:standard:unit:radian;2",
+      "degreeOfArc": "dtmi:standard:unit:degreeOfArc;2",
+      "minuteOfArc": "dtmi:standard:unit:minuteOfArc;2",
+      "secondOfArc": "dtmi:standard:unit:secondOfArc;2",
+      "turn": "dtmi:standard:unit:turn;2",
+      "radianPerSecondSquared": "dtmi:standard:unit:radianPerSecondSquared;2",
+      "radianPerSecond": "dtmi:standard:unit:radianPerSecond;2",
+      "degreePerSecond": "dtmi:standard:unit:degreePerSecond;2",
+      "revolutionPerSecond": "dtmi:standard:unit:revolutionPerSecond;2",
+      "revolutionPerMinute": "dtmi:standard:unit:revolutionPerMinute;2",
+      "squareMetre": "dtmi:standard:unit:squareMetre;2",
+      "squareCentimetre": "dtmi:standard:unit:squareCentimetre;2",
+      "squareMillimetre": "dtmi:standard:unit:squareMillimetre;2",
+      "squareKilometre": "dtmi:standard:unit:squareKilometre;2",
+      "hectare": "dtmi:standard:unit:hectare;2",
+      "squareFoot": "dtmi:standard:unit:squareFoot;2",
+      "squareInch": "dtmi:standard:unit:squareInch;2",
+      "acre": "dtmi:standard:unit:acre;2",
+      "farad": "dtmi:standard:unit:farad;2",
+      "millifarad": "dtmi:standard:unit:millifarad;2",
+      "microfarad": "dtmi:standard:unit:microfarad;2",
+      "nanofarad": "dtmi:standard:unit:nanofarad;2",
+      "picofarad": "dtmi:standard:unit:picofarad;2",
+      "coulomb": "dtmi:standard:unit:coulomb;2",
+      "ampere": "dtmi:standard:unit:ampere;2",
+      "microampere": "dtmi:standard:unit:microampere;2",
+      "milliampere": "dtmi:standard:unit:milliampere;2",
+      "bitPerSecond": "dtmi:standard:unit:bitPerSecond;2",
+      "kibibitPerSecond": "dtmi:standard:unit:kibibitPerSecond;2",
+      "mebibitPerSecond": "dtmi:standard:unit:mebibitPerSecond;2",
+      "gibibitPerSecond": "dtmi:standard:unit:gibibitPerSecond;2",
+      "tebibitPerSecond": "dtmi:standard:unit:tebibitPerSecond;2",
+      "exbibitPerSecond": "dtmi:standard:unit:exbibitPerSecond;2",
+      "zebibitPerSecond": "dtmi:standard:unit:zebibitPerSecond;2",
+      "yobibitPerSecond": "dtmi:standard:unit:yobibitPerSecond;2",
+      "bytePerSecond": "dtmi:standard:unit:bytePerSecond;2",
+      "kibibytePerSecond": "dtmi:standard:unit:kibibytePerSecond;2",
+      "mebibytePerSecond": "dtmi:standard:unit:mebibytePerSecond;2",
+      "gibibytePerSecond": "dtmi:standard:unit:gibibytePerSecond;2",
+      "tebibytePerSecond": "dtmi:standard:unit:tebibytePerSecond;2",
+      "exbibytePerSecond": "dtmi:standard:unit:exbibytePerSecond;2",
+      "zebibytePerSecond": "dtmi:standard:unit:zebibytePerSecond;2",
+      "yobibytePerSecond": "dtmi:standard:unit:yobibytePerSecond;2",
+      "bit": "dtmi:standard:unit:bit;2",
+      "kibibit": "dtmi:standard:unit:kibibit;2",
+      "mebibit": "dtmi:standard:unit:mebibit;2",
+      "gibibit": "dtmi:standard:unit:gibibit;2",
+      "tebibit": "dtmi:standard:unit:tebibit;2",
+      "exbibit": "dtmi:standard:unit:exbibit;2",
+      "zebibit": "dtmi:standard:unit:zebibit;2",
+      "yobibit": "dtmi:standard:unit:yobibit;2",
+      "byte": "dtmi:standard:unit:byte;2",
+      "kibibyte": "dtmi:standard:unit:kibibyte;2",
+      "mebibyte": "dtmi:standard:unit:mebibyte;2",
+      "gibibyte": "dtmi:standard:unit:gibibyte;2",
+      "tebibyte": "dtmi:standard:unit:tebibyte;2",
+      "exbibyte": "dtmi:standard:unit:exbibyte;2",
+      "zebibyte": "dtmi:standard:unit:zebibyte;2",
+      "yobibyte": "dtmi:standard:unit:yobibyte;2",
+      "kilogramPerCubicMetre": "dtmi:standard:unit:kilogramPerCubicMetre;2",
+      "gramPerCubicMetre": "dtmi:standard:unit:gramPerCubicMetre;2",
+      "joule": "dtmi:standard:unit:joule;2",
+      "kilojoule": "dtmi:standard:unit:kilojoule;2",
+      "megajoule": "dtmi:standard:unit:megajoule;2",
+      "gigajoule": "dtmi:standard:unit:gigajoule;2",
+      "electronvolt": "dtmi:standard:unit:electronvolt;2",
+      "megaelectronvolt": "dtmi:standard:unit:megaelectronvolt;2",
+      "kilowattHour": "dtmi:standard:unit:kilowattHour;2",
+      "newton": "dtmi:standard:unit:newton;2",
+      "pound": "dtmi:standard:unit:pound;2",
+      "ounce": "dtmi:standard:unit:ounce;2",
+      "ton": "dtmi:standard:unit:ton;2",
+      "hertz": "dtmi:standard:unit:hertz;2",
+      "kilohertz": "dtmi:standard:unit:kilohertz;2",
+      "megahertz": "dtmi:standard:unit:megahertz;2",
+      "gigahertz": "dtmi:standard:unit:gigahertz;2",
+      "lux": "dtmi:standard:unit:lux;2",
+      "footcandle": "dtmi:standard:unit:footcandle;2",
+      "henry": "dtmi:standard:unit:henry;2",
+      "millihenry": "dtmi:standard:unit:millihenry;2",
+      "microhenry": "dtmi:standard:unit:microhenry;2",
+      "metre": "dtmi:standard:unit:metre;2",
+      "centimetre": "dtmi:standard:unit:centimetre;2",
+      "millimetre": "dtmi:standard:unit:millimetre;2",
+      "micrometre": "dtmi:standard:unit:micrometre;2",
+      "nanometre": "dtmi:standard:unit:nanometre;2",
+      "kilometre": "dtmi:standard:unit:kilometre;2",
+      "foot": "dtmi:standard:unit:foot;2",
+      "inch": "dtmi:standard:unit:inch;2",
+      "mile": "dtmi:standard:unit:mile;2",
+      "nauticalMile": "dtmi:standard:unit:nauticalMile;2",
+      "astronomicalUnit": "dtmi:standard:unit:astronomicalUnit;2",
+      "candelaPerSquareMetre": "dtmi:standard:unit:candelaPerSquareMetre;2",
+      "lumen": "dtmi:standard:unit:lumen;2",
+      "candela": "dtmi:standard:unit:candela;2",
+      "weber": "dtmi:standard:unit:weber;2",
+      "maxwell": "dtmi:standard:unit:maxwell;2",
+      "tesla": "dtmi:standard:unit:tesla;2",
+      "kilogram": "dtmi:standard:unit:kilogram;2",
+      "gram": "dtmi:standard:unit:gram;2",
+      "milligram": "dtmi:standard:unit:milligram;2",
+      "microgram": "dtmi:standard:unit:microgram;2",
+      "tonne": "dtmi:standard:unit:tonne;2",
+      "slug": "dtmi:standard:unit:slug;2",
+      "gramPerSecond": "dtmi:standard:unit:gramPerSecond;2",
+      "kilogramPerSecond": "dtmi:standard:unit:kilogramPerSecond;2",
+      "gramPerHour": "dtmi:standard:unit:gramPerHour;2",
+      "kilogramPerHour": "dtmi:standard:unit:kilogramPerHour;2",
+      "watt": "dtmi:standard:unit:watt;2",
+      "microwatt": "dtmi:standard:unit:microwatt;2",
+      "milliwatt": "dtmi:standard:unit:milliwatt;2",
+      "kilowatt": "dtmi:standard:unit:kilowatt;2",
+      "megawatt": "dtmi:standard:unit:megawatt;2",
+      "gigawatt": "dtmi:standard:unit:gigawatt;2",
+      "horsepower": "dtmi:standard:unit:horsepower;2",
+      "kilowattHourPerYear": "dtmi:standard:unit:kilowattHourPerYear;2",
+      "pascal": "dtmi:standard:unit:pascal;2",
+      "kilopascal": "dtmi:standard:unit:kilopascal;2",
+      "bar": "dtmi:standard:unit:bar;2",
+      "millibar": "dtmi:standard:unit:millibar;2",
+      "millimetresOfMercury": "dtmi:standard:unit:millimetresOfMercury;2",
+      "poundPerSquareInch": "dtmi:standard:unit:poundPerSquareInch;2",
+      "inchesOfMercury": "dtmi:standard:unit:inchesOfMercury;2",
+      "inchesOfWater": "dtmi:standard:unit:inchesOfWater;2",
+      "ohm": "dtmi:standard:unit:ohm;2",
+      "milliohm": "dtmi:standard:unit:milliohm;2",
+      "kiloohm": "dtmi:standard:unit:kiloohm;2",
+      "megaohm": "dtmi:standard:unit:megaohm;2",
+      "decibel": "dtmi:standard:unit:decibel;2",
+      "bel": "dtmi:standard:unit:bel;2",
+      "kelvin": "dtmi:standard:unit:kelvin;2",
+      "degreeCelsius": "dtmi:standard:unit:degreeCelsius;2",
+      "degreeFahrenheit": "dtmi:standard:unit:degreeFahrenheit;2",
+      "second": "dtmi:standard:unit:second;2",
+      "millisecond": "dtmi:standard:unit:millisecond;2",
+      "microsecond": "dtmi:standard:unit:microsecond;2",
+      "nanosecond": "dtmi:standard:unit:nanosecond;2",
+      "minute": "dtmi:standard:unit:minute;2",
+      "hour": "dtmi:standard:unit:hour;2",
+      "day": "dtmi:standard:unit:day;2",
+      "year": "dtmi:standard:unit:year;2",
+      "unity": "dtmi:standard:unit:unity;2",
+      "percent": "dtmi:standard:unit:percent;2",
+      "newtonMetre": "dtmi:standard:unit:newtonMetre;2",
+      "metrePerSecond": "dtmi:standard:unit:metrePerSecond;2",
+      "centimetrePerSecond": "dtmi:standard:unit:centimetrePerSecond;2",
+      "kilometrePerSecond": "dtmi:standard:unit:kilometrePerSecond;2",
+      "metrePerHour": "dtmi:standard:unit:metrePerHour;2",
+      "kilometrePerHour": "dtmi:standard:unit:kilometrePerHour;2",
+      "milePerHour": "dtmi:standard:unit:milePerHour;2",
+      "milePerSecond": "dtmi:standard:unit:milePerSecond;2",
+      "knot": "dtmi:standard:unit:knot;2",
+      "volt": "dtmi:standard:unit:volt;2",
+      "millivolt": "dtmi:standard:unit:millivolt;2",
+      "microvolt": "dtmi:standard:unit:microvolt;2",
+      "kilovolt": "dtmi:standard:unit:kilovolt;2",
+      "megavolt": "dtmi:standard:unit:megavolt;2",
+      "cubicMetre": "dtmi:standard:unit:cubicMetre;2",
+      "cubicCentimetre": "dtmi:standard:unit:cubicCentimetre;2",
+      "litre": "dtmi:standard:unit:litre;2",
+      "millilitre": "dtmi:standard:unit:millilitre;2",
+      "cubicFoot": "dtmi:standard:unit:cubicFoot;2",
+      "cubicInch": "dtmi:standard:unit:cubicInch;2",
+      "fluidOunce": "dtmi:standard:unit:fluidOunce;2",
+      "gallon": "dtmi:standard:unit:gallon;2",
+      "litrePerSecond": "dtmi:standard:unit:litrePerSecond;2",
+      "millilitrePerSecond": "dtmi:standard:unit:millilitrePerSecond;2",
+      "litrePerHour": "dtmi:standard:unit:litrePerHour;2",
+      "millilitrePerHour": "dtmi:standard:unit:millilitrePerHour;2",
+      "point": "dtmi:standard:schema:geospatial:point;2",
+      "multiPoint": "dtmi:standard:schema:geospatial:multiPoint;2",
+      "lineString": "dtmi:standard:schema:geospatial:lineString;2",
+      "multiLineString": "dtmi:standard:schema:geospatial:multiLineString;2",
+      "polygon": "dtmi:standard:schema:geospatial:polygon;2",
+      "multiPolygon": "dtmi:standard:schema:geospatial:multiPolygon;2"
+    },
+    "dtmi:iotcentral:context;2": {
+      "State": "dtmi:iotcentral:class:State;2",
+      "Event": "dtmi:iotcentral:class:Event;2",
+      "Location": "dtmi:iotcentral:class:Location;2",
+      "VelocityVector": "dtmi:iotcentral:class:VelocityVector;2",
+      "AccelerationVector": "dtmi:iotcentral:class:AccelerationVector;2",
+      "vector": "dtmi:iotcentral:schema:vector;2"
+    }
+  },
+  "partners": [
+    "iotcentral"
+  ],
+  "baseClass": "Entity",
+  "partitionClasses": [
+    "Interface"
+  ],
+  "identifierRestrictions": {
+    "_": {
+      "pattern": "^dtmi:[A-Za-z](?:[A-Za-z0-9_]*[A-Za-z0-9])?(?::[A-Za-z](?:[A-Za-z0-9_]*[A-Za-z0-9])?)*;[1-9][0-9]{0,8}$",
+      "maxLength": 2048
+    },
+    "Interface": {
+      "maxLength": 128
+    }
+  },
+  "extensionKinds": [
+    "None",
+    "SemanticType",
+    "Unit",
+    "SemanticUnit",
+    "UnitAttribute"
+  ],
+  "extensibleMaterialClasses": [
+    "Unit",
+    "UnitAttribute"
+  ],
+  "materialClasses": {
+    "Interface": {
+      "abstract": false,
+      "overt": true,
+      "augmentable": false,
+      "partition": true,
+      "parentClass": "Entity",
+      "typeIds": [
+        "dtmi:dtdl:class:Interface;2",
+        "dtmi:dtdl:class:Entity;2"
+      ],
+      "concreteSubclasses": [
+        "Interface"
+      ],
+      "extensibleMaterialSubclasses": [],
+      "badTypeCauseFormat": "{primaryId:p} property '{property}' has value{secondaryId:e} that does not have @type of Interface.",
+      "badTypeActionFormat": "Provide a value for property '{property}' with @type Interface.",
+      "properties": {
+        "description": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "langString",
+          "defaultLanguage": "en",
+          "allowed": true,
+          "maxLength": 512,
+          "plural": true,
+          "optional": true,
+          "typeRequired": true,
+          "inherited": true,
+          "shadowed": false
+        },
+        "schemas": {
+          "idRequired": true,
+          "literal": false,
+          "class": "ComplexSchema",
+          "allowed": true,
+          "plural": true,
+          "optional": true,
+          "typeRequired": true,
+          "inherited": false,
+          "shadowed": false
+        },
+        "displayName": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "langString",
+          "defaultLanguage": "en",
+          "allowed": true,
+          "maxLength": 64,
+          "plural": true,
+          "optional": true,
+          "typeRequired": true,
+          "inherited": true,
+          "shadowed": false
+        },
+        "comment": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "string",
+          "allowed": true,
+          "maxCount": 1,
+          "maxLength": 512,
+          "plural": false,
+          "optional": true,
+          "typeRequired": true,
+          "inherited": true,
+          "shadowed": false
+        },
+        "extends": {
+          "idRequired": true,
+          "literal": false,
+          "class": "Interface",
+          "allowed": true,
+          "maxCount": 2,
+          "plural": true,
+          "optional": true,
+          "typeRequired": true,
+          "inherited": false,
+          "shadowed": false
+        },
+        "contents": {
+          "idRequired": false,
+          "literal": false,
+          "class": "Content",
+          "allowed": true,
+          "maxCount": 300,
+          "plural": true,
+          "optional": true,
+          "typeRequired": true,
+          "dtmiSegment": "name",
+          "dictionaryKey": "name",
+          "uniqueProperties": [
+            "name"
+          ],
+          "inherited": false,
+          "shadowed": true
+        },
+        "languageVersion": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "integer",
+          "allowed": false,
+          "plural": false,
+          "optional": false,
+          "typeRequired": true,
+          "value": 2,
+          "inherited": true,
+          "shadowed": false
+        }
+      }
+    },
+    "ComplexSchema": {
+      "abstract": true,
+      "overt": false,
+      "augmentable": false,
+      "partition": false,
+      "parentClass": "Schema",
+      "typeIds": [
+        "dtmi:dtdl:class:ComplexSchema;2",
+        "dtmi:dtdl:class:Schema;2",
+        "dtmi:dtdl:class:Entity;2"
+      ],
+      "concreteSubclasses": [
+        "Enum",
+        "Object",
+        "Map",
+        "Array"
+      ],
+      "extensibleMaterialSubclasses": [],
+      "badTypeCauseFormat": "{primaryId:p} property '{property}' has value{secondaryId:e} that does not have @type of Array, Enum, Map, or Object.",
+      "badTypeActionFormat": "Provide a value for property '{property}' with @type in the set of allowable types.",
+      "properties": {
+        "displayName": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "langString",
+          "defaultLanguage": "en",
+          "allowed": true,
+          "maxLength": 64,
+          "plural": true,
+          "optional": true,
+          "typeRequired": true,
+          "inherited": true,
+          "shadowed": false
+        },
+        "description": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "langString",
+          "defaultLanguage": "en",
+          "allowed": true,
+          "maxLength": 512,
+          "plural": true,
+          "optional": true,
+          "typeRequired": true,
+          "inherited": true,
+          "shadowed": false
+        },
+        "languageVersion": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "integer",
+          "allowed": false,
+          "plural": false,
+          "optional": false,
+          "typeRequired": true,
+          "value": 2,
+          "inherited": true,
+          "shadowed": false
+        },
+        "comment": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "string",
+          "allowed": true,
+          "maxCount": 1,
+          "maxLength": 512,
+          "plural": false,
+          "optional": true,
+          "typeRequired": true,
+          "inherited": true,
+          "shadowed": false
+        }
+      }
+    },
+    "Entity": {
+      "abstract": true,
+      "overt": false,
+      "augmentable": false,
+      "partition": false,
+      "parentClass": null,
+      "typeIds": [
+        "dtmi:dtdl:class:Entity;2"
+      ],
+      "concreteSubclasses": [
+        "Interface",
+        "CommandType",
+        "EnumValue",
+        "MapKey",
+        "Boolean",
+        "String",
+        "Array",
+        "MapValue",
+        "Map",
+        "Field",
+        "Object",
+        "Component",
+        "Telemetry",
+        "Command",
+        "Enum",
+        "Property",
+        "CommandPayload",
+        "Relationship",
+        "Double",
+        "Float",
+        "Date",
+        "Long",
+        "Integer",
+        "Time",
+        "DateTime",
+        "Duration"
+      ],
+      "extensibleMaterialSubclasses": [
+        "UnitAttribute",
+        "Unit"
+      ],
+      "badTypeCauseFormat": "Top-level element{secondaryId:e} does not have @type of Array, Command, CommandPayload, Component, Enum, EnumValue, Field, Interface, Map, MapKey, MapValue, Object, Property, Relationship, or Telemetry.",
+      "badTypeActionFormat": "Provide a @type in the set of allowable types.",
+      "properties": {
+        "displayName": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "langString",
+          "defaultLanguage": "en",
+          "allowed": true,
+          "maxLength": 64,
+          "plural": true,
+          "optional": true,
+          "typeRequired": true,
+          "inherited": false,
+          "shadowed": false
+        },
+        "description": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "langString",
+          "defaultLanguage": "en",
+          "allowed": true,
+          "maxLength": 512,
+          "plural": true,
+          "optional": true,
+          "typeRequired": true,
+          "inherited": false,
+          "shadowed": false
+        },
+        "comment": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "string",
+          "allowed": true,
+          "maxCount": 1,
+          "maxLength": 512,
+          "plural": false,
+          "optional": true,
+          "typeRequired": true,
+          "inherited": false,
+          "shadowed": false
+        },
+        "languageVersion": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "integer",
+          "allowed": false,
+          "plural": false,
+          "optional": false,
+          "typeRequired": true,
+          "value": 2,
+          "inherited": false,
+          "shadowed": false
+        }
+      }
+    },
+    "Content": {
+      "abstract": true,
+      "overt": false,
+      "augmentable": false,
+      "partition": false,
+      "parentClass": "NamedEntity",
+      "typeIds": [
+        "dtmi:dtdl:class:Content;2",
+        "dtmi:dtdl:class:NamedEntity;2",
+        "dtmi:dtdl:class:Entity;2"
+      ],
+      "concreteSubclasses": [
+        "Property",
+        "Command",
+        "Telemetry",
+        "Relationship",
+        "Component"
+      ],
+      "extensibleMaterialSubclasses": [],
+      "badTypeCauseFormat": "{primaryId:p} property '{property}' has value{secondaryId:e} that does not have @type of Command, Component, Property, Relationship, or Telemetry.",
+      "badTypeActionFormat": "Provide a value for property '{property}' with @type in the set of allowable types.",
+      "properties": {
+        "displayName": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "langString",
+          "defaultLanguage": "en",
+          "allowed": true,
+          "maxLength": 64,
+          "plural": true,
+          "optional": true,
+          "typeRequired": true,
+          "inherited": true,
+          "shadowed": false
+        },
+        "description": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "langString",
+          "defaultLanguage": "en",
+          "allowed": true,
+          "maxLength": 512,
+          "plural": true,
+          "optional": true,
+          "typeRequired": true,
+          "inherited": true,
+          "shadowed": false
+        },
+        "name": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "string",
+          "allowed": true,
+          "maxCount": 1,
+          "minCount": 1,
+          "maxLength": 64,
+          "pattern": "^[A-Za-z](?:[A-Za-z0-9_]*[A-Za-z0-9])?$",
+          "plural": false,
+          "optional": false,
+          "typeRequired": true,
+          "inherited": true,
+          "shadowed": false
+        },
+        "comment": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "string",
+          "allowed": true,
+          "maxCount": 1,
+          "maxLength": 512,
+          "plural": false,
+          "optional": true,
+          "typeRequired": true,
+          "inherited": true,
+          "shadowed": false
+        },
+        "languageVersion": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "integer",
+          "allowed": false,
+          "plural": false,
+          "optional": false,
+          "typeRequired": true,
+          "value": 2,
+          "inherited": true,
+          "shadowed": false
+        }
+      }
+    },
+    "SchemaField": {
+      "abstract": true,
+      "overt": false,
+      "augmentable": false,
+      "partition": false,
+      "parentClass": "NamedEntity",
+      "typeIds": [
+        "dtmi:dtdl:class:SchemaField;2",
+        "dtmi:dtdl:class:NamedEntity;2",
+        "dtmi:dtdl:class:Entity;2"
+      ],
+      "concreteSubclasses": [
+        "CommandPayload",
+        "Field",
+        "MapValue"
+      ],
+      "extensibleMaterialSubclasses": [],
+      "badTypeCauseFormat": "{primaryId:p} property '{property}' has value{secondaryId:e} that does not have @type of CommandPayload, Field, or MapValue.",
+      "badTypeActionFormat": "Provide a value for property '{property}' with @type in the set of allowable types.",
+      "properties": {
+        "description": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "langString",
+          "defaultLanguage": "en",
+          "allowed": true,
+          "maxLength": 512,
+          "plural": true,
+          "optional": true,
+          "typeRequired": true,
+          "inherited": true,
+          "shadowed": false
+        },
+        "comment": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "string",
+          "allowed": true,
+          "maxCount": 1,
+          "maxLength": 512,
+          "plural": false,
+          "optional": true,
+          "typeRequired": true,
+          "inherited": true,
+          "shadowed": false
+        },
+        "displayName": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "langString",
+          "defaultLanguage": "en",
+          "allowed": true,
+          "maxLength": 64,
+          "plural": true,
+          "optional": true,
+          "typeRequired": true,
+          "inherited": true,
+          "shadowed": false
+        },
+        "name": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "string",
+          "allowed": true,
+          "maxCount": 1,
+          "minCount": 1,
+          "maxLength": 64,
+          "pattern": "^[A-Za-z](?:[A-Za-z0-9_]*[A-Za-z0-9])?$",
+          "plural": false,
+          "optional": false,
+          "typeRequired": true,
+          "inherited": true,
+          "shadowed": false
+        },
+        "schema": {
+          "idRequired": false,
+          "literal": false,
+          "class": "Schema",
+          "allowed": true,
+          "maxCount": 1,
+          "minCount": 1,
+          "plural": false,
+          "optional": false,
+          "typeRequired": true,
+          "inherited": false,
+          "shadowed": false
+        },
+        "languageVersion": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "integer",
+          "allowed": false,
+          "plural": false,
+          "optional": false,
+          "typeRequired": true,
+          "value": 2,
+          "inherited": true,
+          "shadowed": false
+        }
+      }
+    },
+    "Schema": {
+      "abstract": true,
+      "overt": false,
+      "augmentable": false,
+      "partition": false,
+      "parentClass": "Entity",
+      "typeIds": [
+        "dtmi:dtdl:class:Schema;2",
+        "dtmi:dtdl:class:Entity;2"
+      ],
+      "concreteSubclasses": [
+        "Boolean",
+        "String",
+        "Array",
+        "Enum",
+        "Map",
+        "Object",
+        "Double",
+        "Float",
+        "Integer",
+        "Date",
+        "Long",
+        "DateTime",
+        "Duration",
+        "Time"
+      ],
+      "extensibleMaterialSubclasses": [],
+      "badTypeCauseFormat": "{primaryId:p} property '{property}' has value{secondaryId:e} that does not have @type of Array, Enum, Map, or Object, nor is it a standard value for this property.",
+      "badTypeActionFormat": "Provide a value for property '{property}' with @type in the set of allowable types, or choose one of the following values for property '{property}': boolean, date, dateTime, double, duration, float, integer, long, string, time.",
+      "properties": {
+        "description": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "langString",
+          "defaultLanguage": "en",
+          "allowed": true,
+          "maxLength": 512,
+          "plural": true,
+          "optional": true,
+          "typeRequired": true,
+          "inherited": true,
+          "shadowed": false
+        },
+        "displayName": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "langString",
+          "defaultLanguage": "en",
+          "allowed": true,
+          "maxLength": 64,
+          "plural": true,
+          "optional": true,
+          "typeRequired": true,
+          "inherited": true,
+          "shadowed": false
+        },
+        "languageVersion": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "integer",
+          "allowed": false,
+          "plural": false,
+          "optional": false,
+          "typeRequired": true,
+          "value": 2,
+          "inherited": true,
+          "shadowed": false
+        },
+        "comment": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "string",
+          "allowed": true,
+          "maxCount": 1,
+          "maxLength": 512,
+          "plural": false,
+          "optional": true,
+          "typeRequired": true,
+          "inherited": true,
+          "shadowed": false
+        }
+      }
+    },
+    "Boolean": {
+      "abstract": false,
+      "overt": true,
+      "augmentable": false,
+      "partition": false,
+      "parentClass": "PrimitiveSchema",
+      "typeIds": [
+        "dtmi:dtdl:class:Boolean;2",
+        "dtmi:dtdl:class:PrimitiveSchema;2",
+        "dtmi:dtdl:class:Schema;2",
+        "dtmi:dtdl:class:Entity;2"
+      ],
+      "concreteSubclasses": [
+        "Boolean"
+      ],
+      "extensibleMaterialSubclasses": [],
+      "badTypeCauseFormat": "{primaryId:p} property '{property}' has value{secondaryId:e} that is not a standard value for this property.",
+      "badTypeActionFormat": "Choose the following value for property '{property}': boolean.",
+      "properties": {
+        "displayName": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "langString",
+          "defaultLanguage": "en",
+          "allowed": true,
+          "maxLength": 64,
+          "plural": true,
+          "optional": true,
+          "typeRequired": true,
+          "inherited": true,
+          "shadowed": false
+        },
+        "comment": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "string",
+          "allowed": true,
+          "maxCount": 1,
+          "maxLength": 512,
+          "plural": false,
+          "optional": true,
+          "typeRequired": true,
+          "inherited": true,
+          "shadowed": false
+        },
+        "description": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "langString",
+          "defaultLanguage": "en",
+          "allowed": true,
+          "maxLength": 512,
+          "plural": true,
+          "optional": true,
+          "typeRequired": true,
+          "inherited": true,
+          "shadowed": false
+        },
+        "languageVersion": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "integer",
+          "allowed": false,
+          "plural": false,
+          "optional": false,
+          "typeRequired": true,
+          "value": 2,
+          "inherited": true,
+          "shadowed": false
+        }
+      }
+    },
+    "PrimitiveSchema": {
+      "abstract": true,
+      "overt": false,
+      "augmentable": false,
+      "partition": false,
+      "parentClass": "Schema",
+      "typeIds": [
+        "dtmi:dtdl:class:PrimitiveSchema;2",
+        "dtmi:dtdl:class:Schema;2",
+        "dtmi:dtdl:class:Entity;2"
+      ],
+      "concreteSubclasses": [
+        "Boolean",
+        "String",
+        "Double",
+        "Float",
+        "Integer",
+        "Long",
+        "Date",
+        "DateTime",
+        "Duration",
+        "Time"
+      ],
+      "extensibleMaterialSubclasses": [],
+      "badTypeCauseFormat": "{primaryId:p} property '{property}' has value{secondaryId:e} that is not a standard value for this property.",
+      "badTypeActionFormat": "Choose one of the following values for property '{property}': boolean, date, dateTime, double, duration, float, integer, long, string, time.",
+      "properties": {
+        "displayName": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "langString",
+          "defaultLanguage": "en",
+          "allowed": true,
+          "maxLength": 64,
+          "plural": true,
+          "optional": true,
+          "typeRequired": true,
+          "inherited": true,
+          "shadowed": false
+        },
+        "comment": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "string",
+          "allowed": true,
+          "maxCount": 1,
+          "maxLength": 512,
+          "plural": false,
+          "optional": true,
+          "typeRequired": true,
+          "inherited": true,
+          "shadowed": false
+        },
+        "description": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "langString",
+          "defaultLanguage": "en",
+          "allowed": true,
+          "maxLength": 512,
+          "plural": true,
+          "optional": true,
+          "typeRequired": true,
+          "inherited": true,
+          "shadowed": false
+        },
+        "languageVersion": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "integer",
+          "allowed": false,
+          "plural": false,
+          "optional": false,
+          "typeRequired": true,
+          "value": 2,
+          "inherited": true,
+          "shadowed": false
+        }
+      }
+    },
+    "Double": {
+      "abstract": false,
+      "overt": true,
+      "augmentable": false,
+      "partition": false,
+      "parentClass": "NumericSchema",
+      "typeIds": [
+        "dtmi:dtdl:class:Double;2",
+        "dtmi:dtdl:class:NumericSchema;2",
+        "dtmi:dtdl:class:PrimitiveSchema;2",
+        "dtmi:dtdl:class:Schema;2",
+        "dtmi:dtdl:class:Entity;2"
+      ],
+      "concreteSubclasses": [
+        "Double"
+      ],
+      "extensibleMaterialSubclasses": [],
+      "badTypeCauseFormat": "{primaryId:p} property '{property}' has value{secondaryId:e} that is not a standard value for this property.",
+      "badTypeActionFormat": "Choose the following value for property '{property}': double.",
+      "properties": {
+        "displayName": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "langString",
+          "defaultLanguage": "en",
+          "allowed": true,
+          "maxLength": 64,
+          "plural": true,
+          "optional": true,
+          "typeRequired": true,
+          "inherited": true,
+          "shadowed": false
+        },
+        "description": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "langString",
+          "defaultLanguage": "en",
+          "allowed": true,
+          "maxLength": 512,
+          "plural": true,
+          "optional": true,
+          "typeRequired": true,
+          "inherited": true,
+          "shadowed": false
+        },
+        "comment": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "string",
+          "allowed": true,
+          "maxCount": 1,
+          "maxLength": 512,
+          "plural": false,
+          "optional": true,
+          "typeRequired": true,
+          "inherited": true,
+          "shadowed": false
+        },
+        "languageVersion": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "integer",
+          "allowed": false,
+          "plural": false,
+          "optional": false,
+          "typeRequired": true,
+          "value": 2,
+          "inherited": true,
+          "shadowed": false
+        }
+      }
+    },
+    "NumericSchema": {
+      "abstract": true,
+      "overt": false,
+      "augmentable": false,
+      "partition": false,
+      "parentClass": "PrimitiveSchema",
+      "typeIds": [
+        "dtmi:dtdl:class:NumericSchema;2",
+        "dtmi:dtdl:class:PrimitiveSchema;2",
+        "dtmi:dtdl:class:Schema;2",
+        "dtmi:dtdl:class:Entity;2"
+      ],
+      "concreteSubclasses": [
+        "Double",
+        "Float",
+        "Long",
+        "Integer"
+      ],
+      "extensibleMaterialSubclasses": [],
+      "badTypeCauseFormat": "{primaryId:p} property '{property}' has value{secondaryId:e} that is not a standard value for this property.",
+      "badTypeActionFormat": "Choose one of the following values for property '{property}': double, float, integer, long.",
+      "properties": {
+        "displayName": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "langString",
+          "defaultLanguage": "en",
+          "allowed": true,
+          "maxLength": 64,
+          "plural": true,
+          "optional": true,
+          "typeRequired": true,
+          "inherited": true,
+          "shadowed": false
+        },
+        "comment": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "string",
+          "allowed": true,
+          "maxCount": 1,
+          "maxLength": 512,
+          "plural": false,
+          "optional": true,
+          "typeRequired": true,
+          "inherited": true,
+          "shadowed": false
+        },
+        "description": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "langString",
+          "defaultLanguage": "en",
+          "allowed": true,
+          "maxLength": 512,
+          "plural": true,
+          "optional": true,
+          "typeRequired": true,
+          "inherited": true,
+          "shadowed": false
+        },
+        "languageVersion": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "integer",
+          "allowed": false,
+          "plural": false,
+          "optional": false,
+          "typeRequired": true,
+          "value": 2,
+          "inherited": true,
+          "shadowed": false
+        }
+      }
+    },
+    "Long": {
+      "abstract": false,
+      "overt": true,
+      "augmentable": false,
+      "partition": false,
+      "parentClass": "NumericSchema",
+      "typeIds": [
+        "dtmi:dtdl:class:Long;2",
+        "dtmi:dtdl:class:NumericSchema;2",
+        "dtmi:dtdl:class:PrimitiveSchema;2",
+        "dtmi:dtdl:class:Schema;2",
+        "dtmi:dtdl:class:Entity;2"
+      ],
+      "concreteSubclasses": [
+        "Long"
+      ],
+      "extensibleMaterialSubclasses": [],
+      "badTypeCauseFormat": "{primaryId:p} property '{property}' has value{secondaryId:e} that is not a standard value for this property.",
+      "badTypeActionFormat": "Choose the following value for property '{property}': long.",
+      "properties": {
+        "displayName": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "langString",
+          "defaultLanguage": "en",
+          "allowed": true,
+          "maxLength": 64,
+          "plural": true,
+          "optional": true,
+          "typeRequired": true,
+          "inherited": true,
+          "shadowed": false
+        },
+        "description": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "langString",
+          "defaultLanguage": "en",
+          "allowed": true,
+          "maxLength": 512,
+          "plural": true,
+          "optional": true,
+          "typeRequired": true,
+          "inherited": true,
+          "shadowed": false
+        },
+        "comment": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "string",
+          "allowed": true,
+          "maxCount": 1,
+          "maxLength": 512,
+          "plural": false,
+          "optional": true,
+          "typeRequired": true,
+          "inherited": true,
+          "shadowed": false
+        },
+        "languageVersion": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "integer",
+          "allowed": false,
+          "plural": false,
+          "optional": false,
+          "typeRequired": true,
+          "value": 2,
+          "inherited": true,
+          "shadowed": false
+        }
+      }
+    },
+    "Float": {
+      "abstract": false,
+      "overt": true,
+      "augmentable": false,
+      "partition": false,
+      "parentClass": "NumericSchema",
+      "typeIds": [
+        "dtmi:dtdl:class:Float;2",
+        "dtmi:dtdl:class:NumericSchema;2",
+        "dtmi:dtdl:class:PrimitiveSchema;2",
+        "dtmi:dtdl:class:Schema;2",
+        "dtmi:dtdl:class:Entity;2"
+      ],
+      "concreteSubclasses": [
+        "Float"
+      ],
+      "extensibleMaterialSubclasses": [],
+      "badTypeCauseFormat": "{primaryId:p} property '{property}' has value{secondaryId:e} that is not a standard value for this property.",
+      "badTypeActionFormat": "Choose the following value for property '{property}': float.",
+      "properties": {
+        "displayName": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "langString",
+          "defaultLanguage": "en",
+          "allowed": true,
+          "maxLength": 64,
+          "plural": true,
+          "optional": true,
+          "typeRequired": true,
+          "inherited": true,
+          "shadowed": false
+        },
+        "languageVersion": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "integer",
+          "allowed": false,
+          "plural": false,
+          "optional": false,
+          "typeRequired": true,
+          "value": 2,
+          "inherited": true,
+          "shadowed": false
+        },
+        "description": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "langString",
+          "defaultLanguage": "en",
+          "allowed": true,
+          "maxLength": 512,
+          "plural": true,
+          "optional": true,
+          "typeRequired": true,
+          "inherited": true,
+          "shadowed": false
+        },
+        "comment": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "string",
+          "allowed": true,
+          "maxCount": 1,
+          "maxLength": 512,
+          "plural": false,
+          "optional": true,
+          "typeRequired": true,
+          "inherited": true,
+          "shadowed": false
+        }
+      }
+    },
+    "Integer": {
+      "abstract": false,
+      "overt": true,
+      "augmentable": false,
+      "partition": false,
+      "parentClass": "NumericSchema",
+      "typeIds": [
+        "dtmi:dtdl:class:Integer;2",
+        "dtmi:dtdl:class:NumericSchema;2",
+        "dtmi:dtdl:class:PrimitiveSchema;2",
+        "dtmi:dtdl:class:Schema;2",
+        "dtmi:dtdl:class:Entity;2"
+      ],
+      "concreteSubclasses": [
+        "Integer"
+      ],
+      "extensibleMaterialSubclasses": [],
+      "badTypeCauseFormat": "{primaryId:p} property '{property}' has value{secondaryId:e} that is not a standard value for this property.",
+      "badTypeActionFormat": "Choose the following value for property '{property}': integer.",
+      "properties": {
+        "displayName": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "langString",
+          "defaultLanguage": "en",
+          "allowed": true,
+          "maxLength": 64,
+          "plural": true,
+          "optional": true,
+          "typeRequired": true,
+          "inherited": true,
+          "shadowed": false
+        },
+        "comment": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "string",
+          "allowed": true,
+          "maxCount": 1,
+          "maxLength": 512,
+          "plural": false,
+          "optional": true,
+          "typeRequired": true,
+          "inherited": true,
+          "shadowed": false
+        },
+        "description": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "langString",
+          "defaultLanguage": "en",
+          "allowed": true,
+          "maxLength": 512,
+          "plural": true,
+          "optional": true,
+          "typeRequired": true,
+          "inherited": true,
+          "shadowed": false
+        },
+        "languageVersion": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "integer",
+          "allowed": false,
+          "plural": false,
+          "optional": false,
+          "typeRequired": true,
+          "value": 2,
+          "inherited": true,
+          "shadowed": false
+        }
+      }
+    },
+    "Date": {
+      "abstract": false,
+      "overt": true,
+      "augmentable": false,
+      "partition": false,
+      "parentClass": "TemporalSchema",
+      "typeIds": [
+        "dtmi:dtdl:class:Date;2",
+        "dtmi:dtdl:class:TemporalSchema;2",
+        "dtmi:dtdl:class:PrimitiveSchema;2",
+        "dtmi:dtdl:class:Schema;2",
+        "dtmi:dtdl:class:Entity;2"
+      ],
+      "concreteSubclasses": [
+        "Date"
+      ],
+      "extensibleMaterialSubclasses": [],
+      "badTypeCauseFormat": "{primaryId:p} property '{property}' has value{secondaryId:e} that is not a standard value for this property.",
+      "badTypeActionFormat": "Choose the following value for property '{property}': date.",
+      "properties": {
+        "description": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "langString",
+          "defaultLanguage": "en",
+          "allowed": true,
+          "maxLength": 512,
+          "plural": true,
+          "optional": true,
+          "typeRequired": true,
+          "inherited": true,
+          "shadowed": false
+        },
+        "displayName": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "langString",
+          "defaultLanguage": "en",
+          "allowed": true,
+          "maxLength": 64,
+          "plural": true,
+          "optional": true,
+          "typeRequired": true,
+          "inherited": true,
+          "shadowed": false
+        },
+        "comment": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "string",
+          "allowed": true,
+          "maxCount": 1,
+          "maxLength": 512,
+          "plural": false,
+          "optional": true,
+          "typeRequired": true,
+          "inherited": true,
+          "shadowed": false
+        },
+        "languageVersion": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "integer",
+          "allowed": false,
+          "plural": false,
+          "optional": false,
+          "typeRequired": true,
+          "value": 2,
+          "inherited": true,
+          "shadowed": false
+        }
+      }
+    },
+    "DateTime": {
+      "abstract": false,
+      "overt": true,
+      "augmentable": false,
+      "partition": false,
+      "parentClass": "TemporalSchema",
+      "typeIds": [
+        "dtmi:dtdl:class:DateTime;2",
+        "dtmi:dtdl:class:TemporalSchema;2",
+        "dtmi:dtdl:class:PrimitiveSchema;2",
+        "dtmi:dtdl:class:Schema;2",
+        "dtmi:dtdl:class:Entity;2"
+      ],
+      "concreteSubclasses": [
+        "DateTime"
+      ],
+      "extensibleMaterialSubclasses": [],
+      "badTypeCauseFormat": "{primaryId:p} property '{property}' has value{secondaryId:e} that is not a standard value for this property.",
+      "badTypeActionFormat": "Choose the following value for property '{property}': dateTime.",
+      "properties": {
+        "description": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "langString",
+          "defaultLanguage": "en",
+          "allowed": true,
+          "maxLength": 512,
+          "plural": true,
+          "optional": true,
+          "typeRequired": true,
+          "inherited": true,
+          "shadowed": false
+        },
+        "displayName": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "langString",
+          "defaultLanguage": "en",
+          "allowed": true,
+          "maxLength": 64,
+          "plural": true,
+          "optional": true,
+          "typeRequired": true,
+          "inherited": true,
+          "shadowed": false
+        },
+        "comment": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "string",
+          "allowed": true,
+          "maxCount": 1,
+          "maxLength": 512,
+          "plural": false,
+          "optional": true,
+          "typeRequired": true,
+          "inherited": true,
+          "shadowed": false
+        },
+        "languageVersion": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "integer",
+          "allowed": false,
+          "plural": false,
+          "optional": false,
+          "typeRequired": true,
+          "value": 2,
+          "inherited": true,
+          "shadowed": false
+        }
+      }
+    },
+    "Duration": {
+      "abstract": false,
+      "overt": true,
+      "augmentable": false,
+      "partition": false,
+      "parentClass": "TemporalSchema",
+      "typeIds": [
+        "dtmi:dtdl:class:Duration;2",
+        "dtmi:dtdl:class:TemporalSchema;2",
+        "dtmi:dtdl:class:PrimitiveSchema;2",
+        "dtmi:dtdl:class:Schema;2",
+        "dtmi:dtdl:class:Entity;2"
+      ],
+      "concreteSubclasses": [
+        "Duration"
+      ],
+      "extensibleMaterialSubclasses": [],
+      "badTypeCauseFormat": "{primaryId:p} property '{property}' has value{secondaryId:e} that is not a standard value for this property.",
+      "badTypeActionFormat": "Choose the following value for property '{property}': duration.",
+      "properties": {
+        "displayName": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "langString",
+          "defaultLanguage": "en",
+          "allowed": true,
+          "maxLength": 64,
+          "plural": true,
+          "optional": true,
+          "typeRequired": true,
+          "inherited": true,
+          "shadowed": false
+        },
+        "comment": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "string",
+          "allowed": true,
+          "maxCount": 1,
+          "maxLength": 512,
+          "plural": false,
+          "optional": true,
+          "typeRequired": true,
+          "inherited": true,
+          "shadowed": false
+        },
+        "description": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "langString",
+          "defaultLanguage": "en",
+          "allowed": true,
+          "maxLength": 512,
+          "plural": true,
+          "optional": true,
+          "typeRequired": true,
+          "inherited": true,
+          "shadowed": false
+        },
+        "languageVersion": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "integer",
+          "allowed": false,
+          "plural": false,
+          "optional": false,
+          "typeRequired": true,
+          "value": 2,
+          "inherited": true,
+          "shadowed": false
+        }
+      }
+    },
+    "String": {
+      "abstract": false,
+      "overt": true,
+      "augmentable": false,
+      "partition": false,
+      "parentClass": "PrimitiveSchema",
+      "typeIds": [
+        "dtmi:dtdl:class:String;2",
+        "dtmi:dtdl:class:PrimitiveSchema;2",
+        "dtmi:dtdl:class:Schema;2",
+        "dtmi:dtdl:class:Entity;2"
+      ],
+      "concreteSubclasses": [
+        "String"
+      ],
+      "extensibleMaterialSubclasses": [],
+      "badTypeCauseFormat": "{primaryId:p} property '{property}' has value{secondaryId:e} that is not a standard value for this property.",
+      "badTypeActionFormat": "Choose the following value for property '{property}': string.",
+      "properties": {
+        "displayName": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "langString",
+          "defaultLanguage": "en",
+          "allowed": true,
+          "maxLength": 64,
+          "plural": true,
+          "optional": true,
+          "typeRequired": true,
+          "inherited": true,
+          "shadowed": false
+        },
+        "description": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "langString",
+          "defaultLanguage": "en",
+          "allowed": true,
+          "maxLength": 512,
+          "plural": true,
+          "optional": true,
+          "typeRequired": true,
+          "inherited": true,
+          "shadowed": false
+        },
+        "languageVersion": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "integer",
+          "allowed": false,
+          "plural": false,
+          "optional": false,
+          "typeRequired": true,
+          "value": 2,
+          "inherited": true,
+          "shadowed": false
+        },
+        "comment": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "string",
+          "allowed": true,
+          "maxCount": 1,
+          "maxLength": 512,
+          "plural": false,
+          "optional": true,
+          "typeRequired": true,
+          "inherited": true,
+          "shadowed": false
+        }
+      }
+    },
+    "TemporalSchema": {
+      "abstract": true,
+      "overt": false,
+      "augmentable": false,
+      "partition": false,
+      "parentClass": "PrimitiveSchema",
+      "typeIds": [
+        "dtmi:dtdl:class:TemporalSchema;2",
+        "dtmi:dtdl:class:PrimitiveSchema;2",
+        "dtmi:dtdl:class:Schema;2",
+        "dtmi:dtdl:class:Entity;2"
+      ],
+      "concreteSubclasses": [
+        "Time",
+        "Date",
+        "DateTime",
+        "Duration"
+      ],
+      "extensibleMaterialSubclasses": [],
+      "badTypeCauseFormat": "{primaryId:p} property '{property}' has value{secondaryId:e} that is not a standard value for this property.",
+      "badTypeActionFormat": "Choose one of the following values for property '{property}': date, dateTime, duration, time.",
+      "properties": {
+        "displayName": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "langString",
+          "defaultLanguage": "en",
+          "allowed": true,
+          "maxLength": 64,
+          "plural": true,
+          "optional": true,
+          "typeRequired": true,
+          "inherited": true,
+          "shadowed": false
+        },
+        "comment": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "string",
+          "allowed": true,
+          "maxCount": 1,
+          "maxLength": 512,
+          "plural": false,
+          "optional": true,
+          "typeRequired": true,
+          "inherited": true,
+          "shadowed": false
+        },
+        "description": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "langString",
+          "defaultLanguage": "en",
+          "allowed": true,
+          "maxLength": 512,
+          "plural": true,
+          "optional": true,
+          "typeRequired": true,
+          "inherited": true,
+          "shadowed": false
+        },
+        "languageVersion": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "integer",
+          "allowed": false,
+          "plural": false,
+          "optional": false,
+          "typeRequired": true,
+          "value": 2,
+          "inherited": true,
+          "shadowed": false
+        }
+      }
+    },
+    "Time": {
+      "abstract": false,
+      "overt": true,
+      "augmentable": false,
+      "partition": false,
+      "parentClass": "TemporalSchema",
+      "typeIds": [
+        "dtmi:dtdl:class:Time;2",
+        "dtmi:dtdl:class:TemporalSchema;2",
+        "dtmi:dtdl:class:PrimitiveSchema;2",
+        "dtmi:dtdl:class:Schema;2",
+        "dtmi:dtdl:class:Entity;2"
+      ],
+      "concreteSubclasses": [
+        "Time"
+      ],
+      "extensibleMaterialSubclasses": [],
+      "badTypeCauseFormat": "{primaryId:p} property '{property}' has value{secondaryId:e} that is not a standard value for this property.",
+      "badTypeActionFormat": "Choose the following value for property '{property}': time.",
+      "properties": {
+        "comment": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "string",
+          "allowed": true,
+          "maxCount": 1,
+          "maxLength": 512,
+          "plural": false,
+          "optional": true,
+          "typeRequired": true,
+          "inherited": true,
+          "shadowed": false
+        },
+        "displayName": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "langString",
+          "defaultLanguage": "en",
+          "allowed": true,
+          "maxLength": 64,
+          "plural": true,
+          "optional": true,
+          "typeRequired": true,
+          "inherited": true,
+          "shadowed": false
+        },
+        "description": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "langString",
+          "defaultLanguage": "en",
+          "allowed": true,
+          "maxLength": 512,
+          "plural": true,
+          "optional": true,
+          "typeRequired": true,
+          "inherited": true,
+          "shadowed": false
+        },
+        "languageVersion": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "integer",
+          "allowed": false,
+          "plural": false,
+          "optional": false,
+          "typeRequired": true,
+          "value": 2,
+          "inherited": true,
+          "shadowed": false
+        }
+      }
+    },
+    "Map": {
+      "abstract": false,
+      "overt": true,
+      "augmentable": false,
+      "partition": false,
+      "parentClass": "ComplexSchema",
+      "typeIds": [
+        "dtmi:dtdl:class:Map;2",
+        "dtmi:dtdl:class:ComplexSchema;2",
+        "dtmi:dtdl:class:Schema;2",
+        "dtmi:dtdl:class:Entity;2"
+      ],
+      "concreteSubclasses": [
+        "Map"
+      ],
+      "extensibleMaterialSubclasses": [],
+      "badTypeCauseFormat": "{primaryId:p} property '{property}' has value{secondaryId:e} that does not have @type of Map.",
+      "badTypeActionFormat": "Provide a value for property '{property}' with @type Map.",
+      "properties": {
+        "description": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "langString",
+          "defaultLanguage": "en",
+          "allowed": true,
+          "maxLength": 512,
+          "plural": true,
+          "optional": true,
+          "typeRequired": true,
+          "inherited": true,
+          "shadowed": false
+        },
+        "comment": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "string",
+          "allowed": true,
+          "maxCount": 1,
+          "maxLength": 512,
+          "plural": false,
+          "optional": true,
+          "typeRequired": true,
+          "inherited": true,
+          "shadowed": false
+        },
+        "displayName": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "langString",
+          "defaultLanguage": "en",
+          "allowed": true,
+          "maxLength": 64,
+          "plural": true,
+          "optional": true,
+          "typeRequired": true,
+          "inherited": true,
+          "shadowed": false
+        },
+        "languageVersion": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "integer",
+          "allowed": false,
+          "plural": false,
+          "optional": false,
+          "typeRequired": true,
+          "value": 2,
+          "inherited": true,
+          "shadowed": false
+        },
+        "mapValue": {
+          "idRequired": false,
+          "literal": false,
+          "class": "MapValue",
+          "allowed": true,
+          "maxCount": 1,
+          "minCount": 1,
+          "plural": false,
+          "optional": false,
+          "typeRequired": false,
+          "inherited": false,
+          "shadowed": false
+        },
+        "mapKey": {
+          "idRequired": false,
+          "literal": false,
+          "class": "MapKey",
+          "allowed": true,
+          "maxCount": 1,
+          "minCount": 1,
+          "plural": false,
+          "optional": false,
+          "typeRequired": false,
+          "inherited": false,
+          "shadowed": false
+        }
+      }
+    },
+    "Array": {
+      "abstract": false,
+      "overt": true,
+      "augmentable": false,
+      "partition": false,
+      "parentClass": "ComplexSchema",
+      "typeIds": [
+        "dtmi:dtdl:class:Array;2",
+        "dtmi:dtdl:class:ComplexSchema;2",
+        "dtmi:dtdl:class:Schema;2",
+        "dtmi:dtdl:class:Entity;2"
+      ],
+      "concreteSubclasses": [
+        "Array"
+      ],
+      "extensibleMaterialSubclasses": [],
+      "badTypeCauseFormat": "{primaryId:p} property '{property}' has value{secondaryId:e} that does not have @type of Array.",
+      "badTypeActionFormat": "Provide a value for property '{property}' with @type Array.",
+      "properties": {
+        "description": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "langString",
+          "defaultLanguage": "en",
+          "allowed": true,
+          "maxLength": 512,
+          "plural": true,
+          "optional": true,
+          "typeRequired": true,
+          "inherited": true,
+          "shadowed": false
+        },
+        "comment": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "string",
+          "allowed": true,
+          "maxCount": 1,
+          "maxLength": 512,
+          "plural": false,
+          "optional": true,
+          "typeRequired": true,
+          "inherited": true,
+          "shadowed": false
+        },
+        "displayName": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "langString",
+          "defaultLanguage": "en",
+          "allowed": true,
+          "maxLength": 64,
+          "plural": true,
+          "optional": true,
+          "typeRequired": true,
+          "inherited": true,
+          "shadowed": false
+        },
+        "languageVersion": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "integer",
+          "allowed": false,
+          "plural": false,
+          "optional": false,
+          "typeRequired": true,
+          "value": 2,
+          "inherited": true,
+          "shadowed": false
+        },
+        "elementSchema": {
+          "idRequired": false,
+          "literal": false,
+          "class": "Schema",
+          "allowed": true,
+          "maxCount": 1,
+          "minCount": 1,
+          "plural": false,
+          "optional": false,
+          "typeRequired": true,
+          "inherited": false,
+          "shadowed": false
+        }
+      }
+    },
+    "Enum": {
+      "abstract": false,
+      "overt": true,
+      "augmentable": false,
+      "partition": false,
+      "parentClass": "ComplexSchema",
+      "typeIds": [
+        "dtmi:dtdl:class:Enum;2",
+        "dtmi:dtdl:class:ComplexSchema;2",
+        "dtmi:dtdl:class:Schema;2",
+        "dtmi:dtdl:class:Entity;2"
+      ],
+      "concreteSubclasses": [
+        "Enum"
+      ],
+      "extensibleMaterialSubclasses": [],
+      "badTypeCauseFormat": "{primaryId:p} property '{property}' has value{secondaryId:e} that does not have @type of Enum.",
+      "badTypeActionFormat": "Provide a value for property '{property}' with @type Enum.",
+      "properties": {
+        "displayName": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "langString",
+          "defaultLanguage": "en",
+          "allowed": true,
+          "maxLength": 64,
+          "plural": true,
+          "optional": true,
+          "typeRequired": true,
+          "inherited": true,
+          "shadowed": false
+        },
+        "comment": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "string",
+          "allowed": true,
+          "maxCount": 1,
+          "maxLength": 512,
+          "plural": false,
+          "optional": true,
+          "typeRequired": true,
+          "inherited": true,
+          "shadowed": false
+        },
+        "description": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "langString",
+          "defaultLanguage": "en",
+          "allowed": true,
+          "maxLength": 512,
+          "plural": true,
+          "optional": true,
+          "typeRequired": true,
+          "inherited": true,
+          "shadowed": false
+        },
+        "valueSchema": {
+          "idRequired": true,
+          "literal": false,
+          "class": "Schema",
+          "allowed": true,
+          "maxCount": 1,
+          "minCount": 1,
+          "values": [
+            "integer",
+            "string"
+          ],
+          "plural": false,
+          "optional": false,
+          "typeRequired": true,
+          "inherited": false,
+          "shadowed": false
+        },
+        "languageVersion": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "integer",
+          "allowed": false,
+          "plural": false,
+          "optional": false,
+          "typeRequired": true,
+          "value": 2,
+          "inherited": true,
+          "shadowed": false
+        },
+        "enumValues": {
+          "idRequired": false,
+          "literal": false,
+          "class": "EnumValue",
+          "allowed": true,
+          "maxCount": 100,
+          "minCount": 1,
+          "plural": true,
+          "optional": false,
+          "typeRequired": false,
+          "dtmiSegment": "name",
+          "uniqueProperties": [
+            "name",
+            "enumValue"
+          ],
+          "inherited": false,
+          "shadowed": false
+        }
+      }
+    },
+    "Field": {
+      "abstract": false,
+      "overt": true,
+      "augmentable": false,
+      "partition": false,
+      "parentClass": "SchemaField",
+      "typeIds": [
+        "dtmi:dtdl:class:Field;2",
+        "dtmi:dtdl:class:SchemaField;2",
+        "dtmi:dtdl:class:NamedEntity;2",
+        "dtmi:dtdl:class:Entity;2"
+      ],
+      "concreteSubclasses": [
+        "Field"
+      ],
+      "extensibleMaterialSubclasses": [],
+      "badTypeCauseFormat": "{primaryId:p} property '{property}' has value{secondaryId:e} that does not have @type of Field.",
+      "badTypeActionFormat": "Provide a value for property '{property}' with @type Field.",
+      "properties": {
+        "name": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "string",
+          "allowed": true,
+          "maxCount": 1,
+          "minCount": 1,
+          "maxLength": 64,
+          "pattern": "^[A-Za-z](?:[A-Za-z0-9_]*[A-Za-z0-9])?$",
+          "plural": false,
+          "optional": false,
+          "typeRequired": true,
+          "inherited": true,
+          "shadowed": false
+        },
+        "schema": {
+          "idRequired": false,
+          "literal": false,
+          "class": "Schema",
+          "allowed": true,
+          "maxCount": 1,
+          "minCount": 1,
+          "plural": false,
+          "optional": false,
+          "typeRequired": true,
+          "inherited": true,
+          "shadowed": false
+        },
+        "description": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "langString",
+          "defaultLanguage": "en",
+          "allowed": true,
+          "maxLength": 512,
+          "plural": true,
+          "optional": true,
+          "typeRequired": true,
+          "inherited": true,
+          "shadowed": false
+        },
+        "comment": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "string",
+          "allowed": true,
+          "maxCount": 1,
+          "maxLength": 512,
+          "plural": false,
+          "optional": true,
+          "typeRequired": true,
+          "inherited": true,
+          "shadowed": false
+        },
+        "languageVersion": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "integer",
+          "allowed": false,
+          "plural": false,
+          "optional": false,
+          "typeRequired": true,
+          "value": 2,
+          "inherited": true,
+          "shadowed": false
+        },
+        "displayName": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "langString",
+          "defaultLanguage": "en",
+          "allowed": true,
+          "maxLength": 64,
+          "plural": true,
+          "optional": true,
+          "typeRequired": true,
+          "inherited": true,
+          "shadowed": false
+        }
+      }
+    },
+    "Component": {
+      "abstract": false,
+      "overt": true,
+      "augmentable": false,
+      "partition": false,
+      "parentClass": "Content",
+      "typeIds": [
+        "dtmi:dtdl:class:Component;2",
+        "dtmi:dtdl:class:Content;2",
+        "dtmi:dtdl:class:NamedEntity;2",
+        "dtmi:dtdl:class:Entity;2"
+      ],
+      "concreteSubclasses": [
+        "Component"
+      ],
+      "extensibleMaterialSubclasses": [],
+      "badTypeCauseFormat": "{primaryId:p} property '{property}' has value{secondaryId:e} that does not have @type of Component.",
+      "badTypeActionFormat": "Provide a value for property '{property}' with @type Component.",
+      "properties": {
+        "schema": {
+          "idRequired": true,
+          "literal": false,
+          "class": "Interface",
+          "allowed": true,
+          "maxCount": 1,
+          "minCount": 1,
+          "plural": false,
+          "optional": false,
+          "typeRequired": true,
+          "inherited": false,
+          "shadowed": false
+        },
+        "comment": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "string",
+          "allowed": true,
+          "maxCount": 1,
+          "maxLength": 512,
+          "plural": false,
+          "optional": true,
+          "typeRequired": true,
+          "inherited": true,
+          "shadowed": false
+        },
+        "displayName": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "langString",
+          "defaultLanguage": "en",
+          "allowed": true,
+          "maxLength": 64,
+          "plural": true,
+          "optional": true,
+          "typeRequired": true,
+          "inherited": true,
+          "shadowed": false
+        },
+        "languageVersion": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "integer",
+          "allowed": false,
+          "plural": false,
+          "optional": false,
+          "typeRequired": true,
+          "value": 2,
+          "inherited": true,
+          "shadowed": false
+        },
+        "description": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "langString",
+          "defaultLanguage": "en",
+          "allowed": true,
+          "maxLength": 512,
+          "plural": true,
+          "optional": true,
+          "typeRequired": true,
+          "inherited": true,
+          "shadowed": false
+        },
+        "name": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "string",
+          "allowed": true,
+          "maxCount": 1,
+          "minCount": 1,
+          "maxLength": 64,
+          "pattern": "^[A-Za-z](?:[A-Za-z0-9_]*[A-Za-z0-9])?$",
+          "plural": false,
+          "optional": false,
+          "typeRequired": true,
+          "inherited": true,
+          "shadowed": false
+        }
+      }
+    },
+    "Object": {
+      "abstract": false,
+      "overt": true,
+      "augmentable": false,
+      "partition": false,
+      "parentClass": "ComplexSchema",
+      "typeIds": [
+        "dtmi:dtdl:class:Object;2",
+        "dtmi:dtdl:class:ComplexSchema;2",
+        "dtmi:dtdl:class:Schema;2",
+        "dtmi:dtdl:class:Entity;2"
+      ],
+      "concreteSubclasses": [
+        "Object"
+      ],
+      "extensibleMaterialSubclasses": [],
+      "badTypeCauseFormat": "{primaryId:p} property '{property}' has value{secondaryId:e} that does not have @type of Object.",
+      "badTypeActionFormat": "Provide a value for property '{property}' with @type Object.",
+      "properties": {
+        "displayName": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "langString",
+          "defaultLanguage": "en",
+          "allowed": true,
+          "maxLength": 64,
+          "plural": true,
+          "optional": true,
+          "typeRequired": true,
+          "inherited": true,
+          "shadowed": false
+        },
+        "comment": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "string",
+          "allowed": true,
+          "maxCount": 1,
+          "maxLength": 512,
+          "plural": false,
+          "optional": true,
+          "typeRequired": true,
+          "inherited": true,
+          "shadowed": false
+        },
+        "description": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "langString",
+          "defaultLanguage": "en",
+          "allowed": true,
+          "maxLength": 512,
+          "plural": true,
+          "optional": true,
+          "typeRequired": true,
+          "inherited": true,
+          "shadowed": false
+        },
+        "fields": {
+          "idRequired": false,
+          "literal": false,
+          "class": "Field",
+          "allowed": true,
+          "maxCount": 30,
+          "minCount": 1,
+          "plural": true,
+          "optional": false,
+          "typeRequired": false,
+          "dtmiSegment": "name",
+          "uniqueProperties": [
+            "name"
+          ],
+          "inherited": false,
+          "shadowed": false
+        },
+        "languageVersion": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "integer",
+          "allowed": false,
+          "plural": false,
+          "optional": false,
+          "typeRequired": true,
+          "value": 2,
+          "inherited": true,
+          "shadowed": false
+        }
+      }
+    },
+    "Relationship": {
+      "abstract": false,
+      "overt": true,
+      "augmentable": true,
+      "partition": false,
+      "parentClass": "Content",
+      "typeIds": [
+        "dtmi:dtdl:class:Relationship;2",
+        "dtmi:dtdl:class:Content;2",
+        "dtmi:dtdl:class:NamedEntity;2",
+        "dtmi:dtdl:class:Entity;2"
+      ],
+      "concreteSubclasses": [
+        "Relationship"
+      ],
+      "extensibleMaterialSubclasses": [],
+      "badTypeCauseFormat": "{primaryId:p} property '{property}' has value{secondaryId:e} that does not have @type of Relationship.",
+      "badTypeActionFormat": "Provide a value for property '{property}' with @type Relationship.",
+      "properties": {
+        "description": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "langString",
+          "defaultLanguage": "en",
+          "allowed": true,
+          "maxLength": 512,
+          "plural": true,
+          "optional": true,
+          "typeRequired": true,
+          "inherited": true,
+          "shadowed": false
+        },
+        "maxMultiplicity": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "integer",
+          "allowed": true,
+          "maxCount": 1,
+          "maxInclusive": 500,
+          "minInclusive": 1,
+          "plural": false,
+          "optional": true,
+          "typeRequired": true,
+          "inherited": false,
+          "shadowed": false
+        },
+        "displayName": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "langString",
+          "defaultLanguage": "en",
+          "allowed": true,
+          "maxLength": 64,
+          "plural": true,
+          "optional": true,
+          "typeRequired": true,
+          "inherited": true,
+          "shadowed": false
+        },
+        "target": {
+          "idRequired": true,
+          "literal": false,
+          "allowed": true,
+          "maxCount": 1,
+          "maxLength": 2048,
+          "pattern": "^dtmi:[A-Za-z](?:[A-Za-z0-9_]*[A-Za-z0-9])?(?::[A-Za-z](?:[A-Za-z0-9_]*[A-Za-z0-9])?)*;[1-9][0-9]{0,8}$",
+          "plural": false,
+          "optional": true,
+          "typeRequired": true,
+          "inherited": false,
+          "shadowed": false
+        },
+        "writable": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "boolean",
+          "allowed": true,
+          "maxCount": 1,
+          "plural": false,
+          "optional": true,
+          "typeRequired": true,
+          "inherited": false,
+          "shadowed": false
+        },
+        "comment": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "string",
+          "allowed": true,
+          "maxCount": 1,
+          "maxLength": 512,
+          "plural": false,
+          "optional": true,
+          "typeRequired": true,
+          "inherited": true,
+          "shadowed": false
+        },
+        "minMultiplicity": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "integer",
+          "allowed": true,
+          "maxCount": 1,
+          "maxInclusive": 0,
+          "minInclusive": 0,
+          "plural": false,
+          "optional": true,
+          "typeRequired": true,
+          "inherited": false,
+          "shadowed": false
+        },
+        "properties": {
+          "idRequired": false,
+          "literal": false,
+          "class": "Property",
+          "allowed": true,
+          "maxCount": 300,
+          "plural": true,
+          "optional": true,
+          "typeRequired": true,
+          "dtmiSegment": "name",
+          "uniqueProperties": [
+            "name"
+          ],
+          "inherited": false,
+          "shadowed": false
+        },
+        "name": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "string",
+          "allowed": true,
+          "maxCount": 1,
+          "minCount": 1,
+          "maxLength": 64,
+          "pattern": "^[A-Za-z](?:[A-Za-z0-9_]*[A-Za-z0-9])?$",
+          "plural": false,
+          "optional": false,
+          "typeRequired": true,
+          "inherited": true,
+          "shadowed": false
+        },
+        "languageVersion": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "integer",
+          "allowed": false,
+          "plural": false,
+          "optional": false,
+          "typeRequired": true,
+          "value": 2,
+          "inherited": true,
+          "shadowed": false
+        }
+      }
+    },
+    "EnumValue": {
+      "abstract": false,
+      "overt": true,
+      "augmentable": false,
+      "partition": false,
+      "parentClass": "NamedEntity",
+      "typeIds": [
+        "dtmi:dtdl:class:EnumValue;2",
+        "dtmi:dtdl:class:NamedEntity;2",
+        "dtmi:dtdl:class:Entity;2"
+      ],
+      "concreteSubclasses": [
+        "EnumValue"
+      ],
+      "extensibleMaterialSubclasses": [],
+      "badTypeCauseFormat": "{primaryId:p} property '{property}' has value{secondaryId:e} that does not have @type of EnumValue.",
+      "badTypeActionFormat": "Provide a value for property '{property}' with @type EnumValue.",
+      "properties": {
+        "comment": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "string",
+          "allowed": true,
+          "maxCount": 1,
+          "maxLength": 512,
+          "plural": false,
+          "optional": true,
+          "typeRequired": true,
+          "inherited": true,
+          "shadowed": false
+        },
+        "description": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "langString",
+          "defaultLanguage": "en",
+          "allowed": true,
+          "maxLength": 512,
+          "plural": true,
+          "optional": true,
+          "typeRequired": true,
+          "inherited": true,
+          "shadowed": false
+        },
+        "displayName": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "langString",
+          "defaultLanguage": "en",
+          "allowed": true,
+          "maxLength": 64,
+          "plural": true,
+          "optional": true,
+          "typeRequired": true,
+          "inherited": true,
+          "shadowed": false
+        },
+        "enumValue": {
+          "idRequired": false,
+          "literal": true,
+          "allowed": true,
+          "maxCount": 1,
+          "minCount": 1,
+          "plural": false,
+          "optional": false,
+          "typeRequired": true,
+          "inherited": false,
+          "shadowed": false
+        },
+        "name": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "string",
+          "allowed": true,
+          "maxCount": 1,
+          "minCount": 1,
+          "maxLength": 64,
+          "pattern": "^[A-Za-z](?:[A-Za-z0-9_]*[A-Za-z0-9])?$",
+          "plural": false,
+          "optional": false,
+          "typeRequired": true,
+          "inherited": true,
+          "shadowed": false
+        },
+        "languageVersion": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "integer",
+          "allowed": false,
+          "plural": false,
+          "optional": false,
+          "typeRequired": true,
+          "value": 2,
+          "inherited": true,
+          "shadowed": false
+        }
+      }
+    },
+    "MapKey": {
+      "abstract": false,
+      "overt": true,
+      "augmentable": false,
+      "partition": false,
+      "parentClass": "NamedEntity",
+      "typeIds": [
+        "dtmi:dtdl:class:MapKey;2",
+        "dtmi:dtdl:class:NamedEntity;2",
+        "dtmi:dtdl:class:Entity;2"
+      ],
+      "concreteSubclasses": [
+        "MapKey"
+      ],
+      "extensibleMaterialSubclasses": [],
+      "badTypeCauseFormat": "{primaryId:p} property '{property}' has value{secondaryId:e} that does not have @type of MapKey.",
+      "badTypeActionFormat": "Provide a value for property '{property}' with @type MapKey.",
+      "properties": {
+        "displayName": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "langString",
+          "defaultLanguage": "en",
+          "allowed": true,
+          "maxLength": 64,
+          "plural": true,
+          "optional": true,
+          "typeRequired": true,
+          "inherited": true,
+          "shadowed": false
+        },
+        "description": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "langString",
+          "defaultLanguage": "en",
+          "allowed": true,
+          "maxLength": 512,
+          "plural": true,
+          "optional": true,
+          "typeRequired": true,
+          "inherited": true,
+          "shadowed": false
+        },
+        "schema": {
+          "idRequired": true,
+          "literal": false,
+          "class": "String",
+          "allowed": true,
+          "maxCount": 1,
+          "minCount": 1,
+          "plural": false,
+          "optional": false,
+          "typeRequired": true,
+          "inherited": false,
+          "shadowed": false
+        },
+        "comment": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "string",
+          "allowed": true,
+          "maxCount": 1,
+          "maxLength": 512,
+          "plural": false,
+          "optional": true,
+          "typeRequired": true,
+          "inherited": true,
+          "shadowed": false
+        },
+        "name": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "string",
+          "allowed": true,
+          "maxCount": 1,
+          "minCount": 1,
+          "maxLength": 64,
+          "pattern": "^[A-Za-z](?:[A-Za-z0-9_]*[A-Za-z0-9])?$",
+          "plural": false,
+          "optional": false,
+          "typeRequired": true,
+          "inherited": true,
+          "shadowed": false
+        },
+        "languageVersion": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "integer",
+          "allowed": false,
+          "plural": false,
+          "optional": false,
+          "typeRequired": true,
+          "value": 2,
+          "inherited": true,
+          "shadowed": false
+        }
+      }
+    },
+    "CommandPayload": {
+      "abstract": false,
+      "overt": true,
+      "augmentable": false,
+      "partition": false,
+      "parentClass": "SchemaField",
+      "typeIds": [
+        "dtmi:dtdl:class:CommandPayload;2",
+        "dtmi:dtdl:class:SchemaField;2",
+        "dtmi:dtdl:class:NamedEntity;2",
+        "dtmi:dtdl:class:Entity;2"
+      ],
+      "concreteSubclasses": [
+        "CommandPayload"
+      ],
+      "extensibleMaterialSubclasses": [],
+      "badTypeCauseFormat": "{primaryId:p} property '{property}' has value{secondaryId:e} that does not have @type of CommandPayload.",
+      "badTypeActionFormat": "Provide a value for property '{property}' with @type CommandPayload.",
+      "properties": {
+        "schema": {
+          "idRequired": false,
+          "literal": false,
+          "class": "Schema",
+          "allowed": true,
+          "maxCount": 1,
+          "minCount": 1,
+          "plural": false,
+          "optional": false,
+          "typeRequired": true,
+          "inherited": true,
+          "shadowed": false
+        },
+        "name": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "string",
+          "allowed": true,
+          "maxCount": 1,
+          "minCount": 1,
+          "maxLength": 64,
+          "pattern": "^[A-Za-z](?:[A-Za-z0-9_]*[A-Za-z0-9])?$",
+          "plural": false,
+          "optional": false,
+          "typeRequired": true,
+          "inherited": true,
+          "shadowed": false
+        },
+        "displayName": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "langString",
+          "defaultLanguage": "en",
+          "allowed": true,
+          "maxLength": 64,
+          "plural": true,
+          "optional": true,
+          "typeRequired": true,
+          "inherited": true,
+          "shadowed": false
+        },
+        "languageVersion": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "integer",
+          "allowed": false,
+          "plural": false,
+          "optional": false,
+          "typeRequired": true,
+          "value": 2,
+          "inherited": true,
+          "shadowed": false
+        },
+        "comment": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "string",
+          "allowed": true,
+          "maxCount": 1,
+          "maxLength": 512,
+          "plural": false,
+          "optional": true,
+          "typeRequired": true,
+          "inherited": true,
+          "shadowed": false
+        },
+        "description": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "langString",
+          "defaultLanguage": "en",
+          "allowed": true,
+          "maxLength": 512,
+          "plural": true,
+          "optional": true,
+          "typeRequired": true,
+          "inherited": true,
+          "shadowed": false
+        }
+      }
+    },
+    "CommandType": {
+      "abstract": false,
+      "overt": true,
+      "augmentable": false,
+      "partition": false,
+      "parentClass": "Entity",
+      "typeIds": [
+        "dtmi:dtdl:class:CommandType;2",
+        "dtmi:dtdl:class:Entity;2"
+      ],
+      "concreteSubclasses": [
+        "CommandType"
+      ],
+      "extensibleMaterialSubclasses": [],
+      "badTypeCauseFormat": "{primaryId:p} property '{property}' has value{secondaryId:e} that is not a standard value for this property.",
+      "badTypeActionFormat": "Choose one of the following values for property '{property}': asynchronous, synchronous.",
+      "properties": {
+        "description": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "langString",
+          "defaultLanguage": "en",
+          "allowed": true,
+          "maxLength": 512,
+          "plural": true,
+          "optional": true,
+          "typeRequired": true,
+          "inherited": true,
+          "shadowed": false
+        },
+        "displayName": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "langString",
+          "defaultLanguage": "en",
+          "allowed": true,
+          "maxLength": 64,
+          "plural": true,
+          "optional": true,
+          "typeRequired": true,
+          "inherited": true,
+          "shadowed": false
+        },
+        "comment": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "string",
+          "allowed": true,
+          "maxCount": 1,
+          "maxLength": 512,
+          "plural": false,
+          "optional": true,
+          "typeRequired": true,
+          "inherited": true,
+          "shadowed": false
+        },
+        "languageVersion": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "integer",
+          "allowed": false,
+          "plural": false,
+          "optional": false,
+          "typeRequired": true,
+          "value": 2,
+          "inherited": true,
+          "shadowed": false
+        }
+      }
+    },
+    "Property": {
+      "abstract": false,
+      "overt": true,
+      "augmentable": true,
+      "partition": false,
+      "parentClass": "Content",
+      "typeIds": [
+        "dtmi:dtdl:class:Property;2",
+        "dtmi:dtdl:class:Content;2",
+        "dtmi:dtdl:class:NamedEntity;2",
+        "dtmi:dtdl:class:Entity;2"
+      ],
+      "concreteSubclasses": [
+        "Property"
+      ],
+      "extensibleMaterialSubclasses": [],
+      "badTypeCauseFormat": "{primaryId:p} property '{property}' has value{secondaryId:e} that does not have @type of Property.",
+      "badTypeActionFormat": "Provide a value for property '{property}' with @type Property.",
+      "properties": {
+        "displayName": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "langString",
+          "defaultLanguage": "en",
+          "allowed": true,
+          "maxLength": 64,
+          "plural": true,
+          "optional": true,
+          "typeRequired": true,
+          "inherited": true,
+          "shadowed": false
+        },
+        "description": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "langString",
+          "defaultLanguage": "en",
+          "allowed": true,
+          "maxLength": 512,
+          "plural": true,
+          "optional": true,
+          "typeRequired": true,
+          "inherited": true,
+          "shadowed": false
+        },
+        "comment": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "string",
+          "allowed": true,
+          "maxCount": 1,
+          "maxLength": 512,
+          "plural": false,
+          "optional": true,
+          "typeRequired": true,
+          "inherited": true,
+          "shadowed": false
+        },
+        "writable": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "boolean",
+          "allowed": true,
+          "maxCount": 1,
+          "plural": false,
+          "optional": true,
+          "typeRequired": true,
+          "inherited": false,
+          "shadowed": false
+        },
+        "schema": {
+          "idRequired": false,
+          "literal": false,
+          "class": "Schema",
+          "allowed": true,
+          "maxCount": 1,
+          "minCount": 1,
+          "plural": false,
+          "optional": false,
+          "typeRequired": true,
+          "inherited": false,
+          "shadowed": false
+        },
+        "languageVersion": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "integer",
+          "allowed": false,
+          "plural": false,
+          "optional": false,
+          "typeRequired": true,
+          "value": 2,
+          "inherited": true,
+          "shadowed": false
+        },
+        "name": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "string",
+          "allowed": true,
+          "maxCount": 1,
+          "minCount": 1,
+          "maxLength": 64,
+          "pattern": "^[A-Za-z](?:[A-Za-z0-9_]*[A-Za-z0-9])?$",
+          "plural": false,
+          "optional": false,
+          "typeRequired": true,
+          "inherited": true,
+          "shadowed": false
+        }
+      }
+    },
+    "NamedEntity": {
+      "abstract": true,
+      "overt": false,
+      "augmentable": false,
+      "partition": false,
+      "parentClass": "Entity",
+      "typeIds": [
+        "dtmi:dtdl:class:NamedEntity;2",
+        "dtmi:dtdl:class:Entity;2"
+      ],
+      "concreteSubclasses": [
+        "EnumValue",
+        "MapKey",
+        "MapValue",
+        "Field",
+        "Component",
+        "Property",
+        "Command",
+        "CommandPayload",
+        "Telemetry",
+        "Relationship"
+      ],
+      "extensibleMaterialSubclasses": [
+        "UnitAttribute"
+      ],
+      "badTypeCauseFormat": "{primaryId:p} property '{property}' has value{secondaryId:e} that does not have @type of Command, CommandPayload, Component, EnumValue, Field, MapKey, MapValue, Property, Relationship, or Telemetry.",
+      "badTypeActionFormat": "Provide a value for property '{property}' with @type in the set of allowable types.",
+      "properties": {
+        "displayName": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "langString",
+          "defaultLanguage": "en",
+          "allowed": true,
+          "maxLength": 64,
+          "plural": true,
+          "optional": true,
+          "typeRequired": true,
+          "inherited": true,
+          "shadowed": false
+        },
+        "name": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "string",
+          "allowed": true,
+          "maxCount": 1,
+          "minCount": 1,
+          "maxLength": 64,
+          "pattern": "^[A-Za-z](?:[A-Za-z0-9_]*[A-Za-z0-9])?$",
+          "plural": false,
+          "optional": false,
+          "typeRequired": true,
+          "inherited": false,
+          "shadowed": false
+        },
+        "comment": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "string",
+          "allowed": true,
+          "maxCount": 1,
+          "maxLength": 512,
+          "plural": false,
+          "optional": true,
+          "typeRequired": true,
+          "inherited": true,
+          "shadowed": false
+        },
+        "description": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "langString",
+          "defaultLanguage": "en",
+          "allowed": true,
+          "maxLength": 512,
+          "plural": true,
+          "optional": true,
+          "typeRequired": true,
+          "inherited": true,
+          "shadowed": false
+        },
+        "languageVersion": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "integer",
+          "allowed": false,
+          "plural": false,
+          "optional": false,
+          "typeRequired": true,
+          "value": 2,
+          "inherited": true,
+          "shadowed": false
+        }
+      }
+    },
+    "MapValue": {
+      "abstract": false,
+      "overt": true,
+      "augmentable": false,
+      "partition": false,
+      "parentClass": "SchemaField",
+      "typeIds": [
+        "dtmi:dtdl:class:MapValue;2",
+        "dtmi:dtdl:class:SchemaField;2",
+        "dtmi:dtdl:class:NamedEntity;2",
+        "dtmi:dtdl:class:Entity;2"
+      ],
+      "concreteSubclasses": [
+        "MapValue"
+      ],
+      "extensibleMaterialSubclasses": [],
+      "badTypeCauseFormat": "{primaryId:p} property '{property}' has value{secondaryId:e} that does not have @type of MapValue.",
+      "badTypeActionFormat": "Provide a value for property '{property}' with @type MapValue.",
+      "properties": {
+        "description": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "langString",
+          "defaultLanguage": "en",
+          "allowed": true,
+          "maxLength": 512,
+          "plural": true,
+          "optional": true,
+          "typeRequired": true,
+          "inherited": true,
+          "shadowed": false
+        },
+        "comment": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "string",
+          "allowed": true,
+          "maxCount": 1,
+          "maxLength": 512,
+          "plural": false,
+          "optional": true,
+          "typeRequired": true,
+          "inherited": true,
+          "shadowed": false
+        },
+        "schema": {
+          "idRequired": false,
+          "literal": false,
+          "class": "Schema",
+          "allowed": true,
+          "maxCount": 1,
+          "minCount": 1,
+          "plural": false,
+          "optional": false,
+          "typeRequired": true,
+          "inherited": true,
+          "shadowed": false
+        },
+        "displayName": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "langString",
+          "defaultLanguage": "en",
+          "allowed": true,
+          "maxLength": 64,
+          "plural": true,
+          "optional": true,
+          "typeRequired": true,
+          "inherited": true,
+          "shadowed": false
+        },
+        "name": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "string",
+          "allowed": true,
+          "maxCount": 1,
+          "minCount": 1,
+          "maxLength": 64,
+          "pattern": "^[A-Za-z](?:[A-Za-z0-9_]*[A-Za-z0-9])?$",
+          "plural": false,
+          "optional": false,
+          "typeRequired": true,
+          "inherited": true,
+          "shadowed": false
+        },
+        "languageVersion": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "integer",
+          "allowed": false,
+          "plural": false,
+          "optional": false,
+          "typeRequired": true,
+          "value": 2,
+          "inherited": true,
+          "shadowed": false
+        }
+      }
+    },
+    "Unit": {
+      "abstract": false,
+      "overt": false,
+      "augmentable": true,
+      "partition": false,
+      "parentClass": "Entity",
+      "typeIds": [
+        "dtmi:dtdl:class:Unit;2",
+        "dtmi:dtdl:class:Entity;2"
+      ],
+      "concreteSubclasses": [],
+      "extensibleMaterialSubclasses": [
+        "Unit"
+      ],
+      "badTypeCauseFormat": "{primaryId:p} property '{property}' has value{secondaryId:e} that is not a standard value for this property.",
+      "badTypeActionFormat": "Choose a value for property '{property}' whose type is a subtype of Unit.",
+      "properties": {
+        "displayName": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "langString",
+          "defaultLanguage": "en",
+          "allowed": true,
+          "maxLength": 64,
+          "plural": true,
+          "optional": true,
+          "typeRequired": true,
+          "inherited": true,
+          "shadowed": false
+        },
+        "symbol": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "string",
+          "allowed": true,
+          "maxCount": 1,
+          "plural": false,
+          "optional": true,
+          "typeRequired": true,
+          "inherited": false,
+          "shadowed": false
+        },
+        "description": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "langString",
+          "defaultLanguage": "en",
+          "allowed": true,
+          "maxLength": 512,
+          "plural": true,
+          "optional": true,
+          "typeRequired": true,
+          "inherited": true,
+          "shadowed": false
+        },
+        "comment": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "string",
+          "allowed": true,
+          "maxCount": 1,
+          "maxLength": 512,
+          "plural": false,
+          "optional": true,
+          "typeRequired": true,
+          "inherited": true,
+          "shadowed": false
+        },
+        "languageVersion": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "integer",
+          "allowed": false,
+          "plural": false,
+          "optional": false,
+          "typeRequired": true,
+          "value": 2,
+          "inherited": true,
+          "shadowed": false
+        }
+      }
+    },
+    "Command": {
+      "abstract": false,
+      "overt": true,
+      "augmentable": false,
+      "partition": false,
+      "parentClass": "Content",
+      "typeIds": [
+        "dtmi:dtdl:class:Command;2",
+        "dtmi:dtdl:class:Content;2",
+        "dtmi:dtdl:class:NamedEntity;2",
+        "dtmi:dtdl:class:Entity;2"
+      ],
+      "concreteSubclasses": [
+        "Command"
+      ],
+      "extensibleMaterialSubclasses": [],
+      "badTypeCauseFormat": "{primaryId:p} property '{property}' has value{secondaryId:e} that does not have @type of Command.",
+      "badTypeActionFormat": "Provide a value for property '{property}' with @type Command.",
+      "properties": {
+        "commandType": {
+          "idRequired": true,
+          "literal": false,
+          "class": "CommandType",
+          "allowed": true,
+          "maxCount": 1,
+          "plural": false,
+          "optional": true,
+          "typeRequired": true,
+          "inherited": false,
+          "shadowed": false
+        },
+        "displayName": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "langString",
+          "defaultLanguage": "en",
+          "allowed": true,
+          "maxLength": 64,
+          "plural": true,
+          "optional": true,
+          "typeRequired": true,
+          "inherited": true,
+          "shadowed": false
+        },
+        "description": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "langString",
+          "defaultLanguage": "en",
+          "allowed": true,
+          "maxLength": 512,
+          "plural": true,
+          "optional": true,
+          "typeRequired": true,
+          "inherited": true,
+          "shadowed": false
+        },
+        "name": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "string",
+          "allowed": true,
+          "maxCount": 1,
+          "minCount": 1,
+          "maxLength": 64,
+          "pattern": "^[A-Za-z](?:[A-Za-z0-9_]*[A-Za-z0-9])?$",
+          "plural": false,
+          "optional": false,
+          "typeRequired": true,
+          "inherited": true,
+          "shadowed": false
+        },
+        "comment": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "string",
+          "allowed": true,
+          "maxCount": 1,
+          "maxLength": 512,
+          "plural": false,
+          "optional": true,
+          "typeRequired": true,
+          "inherited": true,
+          "shadowed": false
+        },
+        "response": {
+          "idRequired": false,
+          "literal": false,
+          "class": "CommandPayload",
+          "allowed": true,
+          "maxCount": 1,
+          "plural": false,
+          "optional": true,
+          "typeRequired": false,
+          "inherited": false,
+          "shadowed": false
+        },
+        "languageVersion": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "integer",
+          "allowed": false,
+          "plural": false,
+          "optional": false,
+          "typeRequired": true,
+          "value": 2,
+          "inherited": true,
+          "shadowed": false
+        },
+        "request": {
+          "idRequired": false,
+          "literal": false,
+          "class": "CommandPayload",
+          "allowed": true,
+          "maxCount": 1,
+          "plural": false,
+          "optional": true,
+          "typeRequired": false,
+          "inherited": false,
+          "shadowed": false
+        }
+      }
+    },
+    "Telemetry": {
+      "abstract": false,
+      "overt": true,
+      "augmentable": true,
+      "partition": false,
+      "parentClass": "Content",
+      "typeIds": [
+        "dtmi:dtdl:class:Telemetry;2",
+        "dtmi:dtdl:class:Content;2",
+        "dtmi:dtdl:class:NamedEntity;2",
+        "dtmi:dtdl:class:Entity;2"
+      ],
+      "concreteSubclasses": [
+        "Telemetry"
+      ],
+      "extensibleMaterialSubclasses": [],
+      "badTypeCauseFormat": "{primaryId:p} property '{property}' has value{secondaryId:e} that does not have @type of Telemetry.",
+      "badTypeActionFormat": "Provide a value for property '{property}' with @type Telemetry.",
+      "properties": {
+        "displayName": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "langString",
+          "defaultLanguage": "en",
+          "allowed": true,
+          "maxLength": 64,
+          "plural": true,
+          "optional": true,
+          "typeRequired": true,
+          "inherited": true,
+          "shadowed": false
+        },
+        "description": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "langString",
+          "defaultLanguage": "en",
+          "allowed": true,
+          "maxLength": 512,
+          "plural": true,
+          "optional": true,
+          "typeRequired": true,
+          "inherited": true,
+          "shadowed": false
+        },
+        "comment": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "string",
+          "allowed": true,
+          "maxCount": 1,
+          "maxLength": 512,
+          "plural": false,
+          "optional": true,
+          "typeRequired": true,
+          "inherited": true,
+          "shadowed": false
+        },
+        "schema": {
+          "idRequired": false,
+          "literal": false,
+          "class": "Schema",
+          "allowed": true,
+          "maxCount": 1,
+          "minCount": 1,
+          "plural": false,
+          "optional": false,
+          "typeRequired": true,
+          "inherited": false,
+          "shadowed": false
+        },
+        "name": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "string",
+          "allowed": true,
+          "maxCount": 1,
+          "minCount": 1,
+          "maxLength": 64,
+          "pattern": "^[A-Za-z](?:[A-Za-z0-9_]*[A-Za-z0-9])?$",
+          "plural": false,
+          "optional": false,
+          "typeRequired": true,
+          "inherited": true,
+          "shadowed": false
+        },
+        "languageVersion": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "integer",
+          "allowed": false,
+          "plural": false,
+          "optional": false,
+          "typeRequired": true,
+          "value": 2,
+          "inherited": true,
+          "shadowed": false
+        }
+      }
+    },
+    "UnitAttribute": {
+      "abstract": false,
+      "overt": false,
+      "augmentable": true,
+      "partition": false,
+      "parentClass": "NamedEntity",
+      "typeIds": [
+        "dtmi:dtdl:class:UnitAttribute;2",
+        "dtmi:dtdl:class:NamedEntity;2",
+        "dtmi:dtdl:class:Entity;2"
+      ],
+      "concreteSubclasses": [],
+      "extensibleMaterialSubclasses": [
+        "UnitAttribute"
+      ],
+      "badTypeCauseFormat": "{primaryId:p} property '{property}' has value{secondaryId:e} that is not a standard value for this property.",
+      "badTypeActionFormat": "Choose a value for property '{property}' whose type is a subtype of UnitAttribute.",
+      "properties": {
+        "description": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "langString",
+          "defaultLanguage": "en",
+          "allowed": true,
+          "maxLength": 512,
+          "plural": true,
+          "optional": true,
+          "typeRequired": true,
+          "inherited": true,
+          "shadowed": false
+        },
+        "comment": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "string",
+          "allowed": true,
+          "maxCount": 1,
+          "maxLength": 512,
+          "plural": false,
+          "optional": true,
+          "typeRequired": true,
+          "inherited": true,
+          "shadowed": false
+        },
+        "languageVersion": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "integer",
+          "allowed": false,
+          "plural": false,
+          "optional": false,
+          "typeRequired": true,
+          "value": 2,
+          "inherited": true,
+          "shadowed": false
+        },
+        "name": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "string",
+          "allowed": true,
+          "maxCount": 1,
+          "minCount": 1,
+          "maxLength": 64,
+          "pattern": "^[A-Za-z](?:[A-Za-z0-9_]*[A-Za-z0-9])?$",
+          "plural": false,
+          "optional": false,
+          "typeRequired": true,
+          "inherited": true,
+          "shadowed": false
+        },
+        "displayName": {
+          "idRequired": false,
+          "literal": true,
+          "datatype": "langString",
+          "defaultLanguage": "en",
+          "allowed": true,
+          "maxLength": 64,
+          "plural": true,
+          "optional": true,
+          "typeRequired": true,
+          "inherited": true,
+          "shadowed": false
+        }
+      }
+    }
+  },
+  "descendantControls": [
+    {
+      "rootClass": "ComplexSchema",
+      "definingClass": "ComplexSchema",
+      "properties": [
+        "elementSchema",
+        "schema"
+      ],
+      "narrow": false,
+      "maxDepth": 5
+    },
+    {
+      "rootClass": "Object",
+      "definingClass": "ComplexSchema",
+      "properties": [
+        "elementSchema",
+        "schema"
+      ],
+      "narrow": false,
+      "maxDepth": 5
+    },
+    {
+      "rootClass": "Array",
+      "definingClass": "ComplexSchema",
+      "properties": [
+        "elementSchema",
+        "schema"
+      ],
+      "narrow": false,
+      "maxDepth": 5
+    },
+    {
+      "rootClass": "Enum",
+      "definingClass": "ComplexSchema",
+      "properties": [
+        "elementSchema",
+        "schema"
+      ],
+      "narrow": false,
+      "maxDepth": 5
+    },
+    {
+      "rootClass": "Map",
+      "definingClass": "ComplexSchema",
+      "properties": [
+        "elementSchema",
+        "schema"
+      ],
+      "narrow": false,
+      "maxDepth": 5
+    },
+    {
+      "rootClass": "Enum",
+      "definingClass": "Enum",
+      "properties": [
+        "enumValue"
+      ],
+      "narrow": false,
+      "datatypeProperty": "valueSchema"
+    },
+    {
+      "rootClass": "Property",
+      "definingClass": "Property",
+      "properties": [
+        "schema"
+      ],
+      "narrow": false,
+      "excludeType": "Array"
+    },
+    {
+      "rootClass": "Component",
+      "definingClass": "Component",
+      "properties": [
+        "contents"
+      ],
+      "narrow": false,
+      "excludeType": "Component"
+    },
+    {
+      "rootClass": "Interface",
+      "definingClass": "Interface",
+      "properties": [
+        "extends"
+      ],
+      "narrow": true,
+      "importProperties": [
+        "contents"
+      ],
+      "maxDepth": 10
+    }
+  ],
+  "supplementalTypes": {
+    "dtmi:dtdl:class:SemanticType;2": {
+      "abstract": true,
+      "parent": null,
+      "extensionKind": "None",
+      "extensionContext": "dtmi:dtdl:context;2",
+      "cotypes": [
+        "Relationship",
+        "Telemetry",
+        "Property"
+      ],
+      "properties": {},
+      "constraints": []
+    },
+    "dtmi:dtdl:class:SemanticUnit;2": {
+      "abstract": true,
+      "parent": null,
+      "extensionKind": "None",
+      "extensionContext": "dtmi:dtdl:context;2",
+      "cotypes": [
+        "Unit"
+      ],
+      "properties": {},
+      "constraints": []
+    },
+    "dtmi:standard:class:DecimalPrefix;2": {
+      "abstract": false,
+      "parent": "dtmi:dtdl:class:UnitAttribute;2",
+      "extensionKind": "UnitAttribute",
+      "extensionContext": "dtmi:dtdl:context;2",
+      "cotypes": [],
+      "properties": {
+        "symbol": {
+          "maxCount": 1,
+          "minCount": 1,
+          "plural": false,
+          "optional": false,
+          "type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "exponent": {
+          "maxCount": 1,
+          "minCount": 1,
+          "plural": false,
+          "optional": false,
+          "type": "http://www.w3.org/2001/XMLSchema#integer"
+        }
+      },
+      "constraints": []
+    },
+    "dtmi:standard:class:QuantitativeType;2": {
+      "abstract": true,
+      "parent": "dtmi:dtdl:class:SemanticType;2",
+      "extensionKind": "SemanticType",
+      "extensionContext": "dtmi:dtdl:context;2",
+      "cotypes": [
+        "Property",
+        "Telemetry"
+      ],
+      "properties": {
+        "unit": {
+          "maxCount": 1,
+          "minCount": 1,
+          "plural": false,
+          "optional": false,
+          "type": "dtmi:dtdl:class:Unit;2"
+        }
+      },
+      "constraints": [
+        {
+          "property": "schema",
+          "requiredTypes": [
+            "dtmi:dtdl:class:NumericSchema;2"
+          ],
+          "requiredTypesString": "NumericSchema"
+        }
+      ]
+    },
+    "dtmi:standard:class:Acceleration;2": {
+      "abstract": false,
+      "parent": "dtmi:standard:class:QuantitativeType;2",
+      "extensionKind": "SemanticType",
+      "extensionContext": "dtmi:dtdl:context;2",
+      "cotypes": [
+        "Telemetry",
+        "Property"
+      ],
+      "properties": {
+        "unit": {
+          "maxCount": 1,
+          "minCount": 1,
+          "plural": false,
+          "optional": false,
+          "type": "dtmi:standard:class:AccelerationUnit;2"
+        }
+      },
+      "constraints": []
+    },
+    "dtmi:standard:class:DecimalUnit;2": {
+      "abstract": false,
+      "parent": "dtmi:dtdl:class:SemanticUnit;2",
+      "extensionKind": "SemanticUnit",
+      "extensionContext": "dtmi:dtdl:context;2",
+      "cotypes": [
+        "Unit"
+      ],
+      "properties": {
+        "prefix": {
+          "maxCount": 1,
+          "plural": false,
+          "optional": true,
+          "type": "dtmi:standard:class:DecimalPrefix;2"
+        },
+        "baseUnit": {
+          "maxCount": 1,
+          "minCount": 1,
+          "plural": false,
+          "optional": false,
+          "type": "dtmi:dtdl:class:Unit;2"
+        }
+      },
+      "constraints": []
+    },
+    "dtmi:standard:class:BinaryPrefix;2": {
+      "abstract": false,
+      "parent": "dtmi:dtdl:class:UnitAttribute;2",
+      "extensionKind": "UnitAttribute",
+      "extensionContext": "dtmi:dtdl:context;2",
+      "cotypes": [],
+      "properties": {
+        "symbol": {
+          "maxCount": 1,
+          "minCount": 1,
+          "plural": false,
+          "optional": false,
+          "type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "exponent": {
+          "maxCount": 1,
+          "minCount": 1,
+          "plural": false,
+          "optional": false,
+          "type": "http://www.w3.org/2001/XMLSchema#integer"
+        }
+      },
+      "constraints": []
+    },
+    "dtmi:standard:class:Angle;2": {
+      "abstract": false,
+      "parent": "dtmi:standard:class:QuantitativeType;2",
+      "extensionKind": "SemanticType",
+      "extensionContext": "dtmi:dtdl:context;2",
+      "cotypes": [
+        "Property",
+        "Telemetry"
+      ],
+      "properties": {
+        "unit": {
+          "maxCount": 1,
+          "minCount": 1,
+          "plural": false,
+          "optional": false,
+          "type": "dtmi:standard:class:AngleUnit;2"
+        }
+      },
+      "constraints": []
+    },
+    "dtmi:standard:class:RatioUnit;2": {
+      "abstract": false,
+      "parent": "dtmi:dtdl:class:SemanticUnit;2",
+      "extensionKind": "SemanticUnit",
+      "extensionContext": "dtmi:dtdl:context;2",
+      "cotypes": [
+        "Unit"
+      ],
+      "properties": {
+        "bottomUnit": {
+          "maxCount": 1,
+          "minCount": 1,
+          "plural": false,
+          "optional": false,
+          "type": "dtmi:dtdl:class:Unit;2"
+        },
+        "topUnit": {
+          "maxCount": 1,
+          "minCount": 1,
+          "plural": false,
+          "optional": false,
+          "type": "dtmi:dtdl:class:Unit;2"
+        }
+      },
+      "constraints": []
+    },
+    "dtmi:standard:class:BinaryUnit;2": {
+      "abstract": false,
+      "parent": "dtmi:dtdl:class:SemanticUnit;2",
+      "extensionKind": "SemanticUnit",
+      "extensionContext": "dtmi:dtdl:context;2",
+      "cotypes": [
+        "Unit"
+      ],
+      "properties": {
+        "prefix": {
+          "maxCount": 1,
+          "plural": false,
+          "optional": true,
+          "type": "dtmi:standard:class:BinaryPrefix;2"
+        },
+        "baseUnit": {
+          "maxCount": 1,
+          "minCount": 1,
+          "plural": false,
+          "optional": false,
+          "type": "dtmi:dtdl:class:Unit;2"
+        }
+      },
+      "constraints": []
+    },
+    "dtmi:standard:class:Area;2": {
+      "abstract": false,
+      "parent": "dtmi:standard:class:QuantitativeType;2",
+      "extensionKind": "SemanticType",
+      "extensionContext": "dtmi:dtdl:context;2",
+      "cotypes": [
+        "Property",
+        "Telemetry"
+      ],
+      "properties": {
+        "unit": {
+          "maxCount": 1,
+          "minCount": 1,
+          "plural": false,
+          "optional": false,
+          "type": "dtmi:standard:class:AreaUnit;2"
+        }
+      },
+      "constraints": []
+    },
+    "dtmi:standard:class:AngularVelocity;2": {
+      "abstract": false,
+      "parent": "dtmi:standard:class:QuantitativeType;2",
+      "extensionKind": "SemanticType",
+      "extensionContext": "dtmi:dtdl:context;2",
+      "cotypes": [
+        "Telemetry",
+        "Property"
+      ],
+      "properties": {
+        "unit": {
+          "maxCount": 1,
+          "minCount": 1,
+          "plural": false,
+          "optional": false,
+          "type": "dtmi:standard:class:AngularVelocityUnit;2"
+        }
+      },
+      "constraints": []
+    },
+    "dtmi:standard:class:AngularAcceleration;2": {
+      "abstract": false,
+      "parent": "dtmi:standard:class:QuantitativeType;2",
+      "extensionKind": "SemanticType",
+      "extensionContext": "dtmi:dtdl:context;2",
+      "cotypes": [
+        "Property",
+        "Telemetry"
+      ],
+      "properties": {
+        "unit": {
+          "maxCount": 1,
+          "minCount": 1,
+          "plural": false,
+          "optional": false,
+          "type": "dtmi:standard:class:AngularAccelerationUnit;2"
+        }
+      },
+      "constraints": []
+    },
+    "dtmi:standard:class:AccelerationUnit;2": {
+      "abstract": false,
+      "parent": "dtmi:dtdl:class:Unit;2",
+      "extensionKind": "Unit",
+      "extensionContext": "dtmi:dtdl:context;2",
+      "cotypes": [],
+      "properties": {},
+      "constraints": []
+    },
+    "dtmi:standard:class:AngularAccelerationUnit;2": {
+      "abstract": false,
+      "parent": "dtmi:dtdl:class:Unit;2",
+      "extensionKind": "Unit",
+      "extensionContext": "dtmi:dtdl:context;2",
+      "cotypes": [],
+      "properties": {},
+      "constraints": []
+    },
+    "dtmi:standard:class:CapacitanceUnit;2": {
+      "abstract": false,
+      "parent": "dtmi:dtdl:class:Unit;2",
+      "extensionKind": "Unit",
+      "extensionContext": "dtmi:dtdl:context;2",
+      "cotypes": [],
+      "properties": {},
+      "constraints": []
+    },
+    "dtmi:standard:class:AngleUnit;2": {
+      "abstract": false,
+      "parent": "dtmi:dtdl:class:Unit;2",
+      "extensionKind": "Unit",
+      "extensionContext": "dtmi:dtdl:context;2",
+      "cotypes": [],
+      "properties": {},
+      "constraints": []
+    },
+    "dtmi:standard:class:Capacitance;2": {
+      "abstract": false,
+      "parent": "dtmi:standard:class:QuantitativeType;2",
+      "extensionKind": "SemanticType",
+      "extensionContext": "dtmi:dtdl:context;2",
+      "cotypes": [
+        "Property",
+        "Telemetry"
+      ],
+      "properties": {
+        "unit": {
+          "maxCount": 1,
+          "minCount": 1,
+          "plural": false,
+          "optional": false,
+          "type": "dtmi:standard:class:CapacitanceUnit;2"
+        }
+      },
+      "constraints": []
+    },
+    "dtmi:standard:class:DataRate;2": {
+      "abstract": false,
+      "parent": "dtmi:standard:class:QuantitativeType;2",
+      "extensionKind": "SemanticType",
+      "extensionContext": "dtmi:dtdl:context;2",
+      "cotypes": [
+        "Telemetry",
+        "Property"
+      ],
+      "properties": {
+        "unit": {
+          "maxCount": 1,
+          "minCount": 1,
+          "plural": false,
+          "optional": false,
+          "type": "dtmi:standard:class:DataRateUnit;2"
+        }
+      },
+      "constraints": []
+    },
+    "dtmi:standard:class:AreaUnit;2": {
+      "abstract": false,
+      "parent": "dtmi:dtdl:class:Unit;2",
+      "extensionKind": "Unit",
+      "extensionContext": "dtmi:dtdl:context;2",
+      "cotypes": [],
+      "properties": {},
+      "constraints": []
+    },
+    "dtmi:standard:class:DataSize;2": {
+      "abstract": false,
+      "parent": "dtmi:standard:class:QuantitativeType;2",
+      "extensionKind": "SemanticType",
+      "extensionContext": "dtmi:dtdl:context;2",
+      "cotypes": [
+        "Property",
+        "Telemetry"
+      ],
+      "properties": {
+        "unit": {
+          "maxCount": 1,
+          "minCount": 1,
+          "plural": false,
+          "optional": false,
+          "type": "dtmi:standard:class:DataSizeUnit;2"
+        }
+      },
+      "constraints": []
+    },
+    "dtmi:standard:class:DensityUnit;2": {
+      "abstract": false,
+      "parent": "dtmi:dtdl:class:Unit;2",
+      "extensionKind": "Unit",
+      "extensionContext": "dtmi:dtdl:context;2",
+      "cotypes": [],
+      "properties": {},
+      "constraints": []
+    },
+    "dtmi:standard:class:AngularVelocityUnit;2": {
+      "abstract": false,
+      "parent": "dtmi:dtdl:class:Unit;2",
+      "extensionKind": "Unit",
+      "extensionContext": "dtmi:dtdl:context;2",
+      "cotypes": [],
+      "properties": {},
+      "constraints": []
+    },
+    "dtmi:standard:class:ElectricCharge;2": {
+      "abstract": false,
+      "parent": "dtmi:standard:class:QuantitativeType;2",
+      "extensionKind": "SemanticType",
+      "extensionContext": "dtmi:dtdl:context;2",
+      "cotypes": [
+        "Property",
+        "Telemetry"
+      ],
+      "properties": {
+        "unit": {
+          "maxCount": 1,
+          "minCount": 1,
+          "plural": false,
+          "optional": false,
+          "type": "dtmi:standard:class:ChargeUnit;2"
+        }
+      },
+      "constraints": []
+    },
+    "dtmi:standard:class:Energy;2": {
+      "abstract": false,
+      "parent": "dtmi:standard:class:QuantitativeType;2",
+      "extensionKind": "SemanticType",
+      "extensionContext": "dtmi:dtdl:context;2",
+      "cotypes": [
+        "Telemetry",
+        "Property"
+      ],
+      "properties": {
+        "unit": {
+          "maxCount": 1,
+          "minCount": 1,
+          "plural": false,
+          "optional": false,
+          "type": "dtmi:standard:class:EnergyUnit;2"
+        }
+      },
+      "constraints": []
+    },
+    "dtmi:standard:class:Current;2": {
+      "abstract": false,
+      "parent": "dtmi:standard:class:QuantitativeType;2",
+      "extensionKind": "SemanticType",
+      "extensionContext": "dtmi:dtdl:context;2",
+      "cotypes": [
+        "Telemetry",
+        "Property"
+      ],
+      "properties": {
+        "unit": {
+          "maxCount": 1,
+          "minCount": 1,
+          "plural": false,
+          "optional": false,
+          "type": "dtmi:standard:class:CurrentUnit;2"
+        }
+      },
+      "constraints": []
+    },
+    "dtmi:standard:class:Density;2": {
+      "abstract": false,
+      "parent": "dtmi:standard:class:QuantitativeType;2",
+      "extensionKind": "SemanticType",
+      "extensionContext": "dtmi:dtdl:context;2",
+      "cotypes": [
+        "Property",
+        "Telemetry"
+      ],
+      "properties": {
+        "unit": {
+          "maxCount": 1,
+          "minCount": 1,
+          "plural": false,
+          "optional": false,
+          "type": "dtmi:standard:class:DensityUnit;2"
+        }
+      },
+      "constraints": []
+    },
+    "dtmi:standard:class:CurrentUnit;2": {
+      "abstract": false,
+      "parent": "dtmi:dtdl:class:Unit;2",
+      "extensionKind": "Unit",
+      "extensionContext": "dtmi:dtdl:context;2",
+      "cotypes": [],
+      "properties": {},
+      "constraints": []
+    },
+    "dtmi:standard:class:Force;2": {
+      "abstract": false,
+      "parent": "dtmi:standard:class:QuantitativeType;2",
+      "extensionKind": "SemanticType",
+      "extensionContext": "dtmi:dtdl:context;2",
+      "cotypes": [
+        "Property",
+        "Telemetry"
+      ],
+      "properties": {
+        "unit": {
+          "maxCount": 1,
+          "minCount": 1,
+          "plural": false,
+          "optional": false,
+          "type": "dtmi:standard:class:ForceUnit;2"
+        }
+      },
+      "constraints": []
+    },
+    "dtmi:standard:class:Distance;2": {
+      "abstract": false,
+      "parent": "dtmi:standard:class:QuantitativeType;2",
+      "extensionKind": "SemanticType",
+      "extensionContext": "dtmi:dtdl:context;2",
+      "cotypes": [
+        "Property",
+        "Telemetry"
+      ],
+      "properties": {
+        "unit": {
+          "maxCount": 1,
+          "minCount": 1,
+          "plural": false,
+          "optional": false,
+          "type": "dtmi:standard:class:LengthUnit;2"
+        }
+      },
+      "constraints": []
+    },
+    "dtmi:standard:class:Frequency;2": {
+      "abstract": false,
+      "parent": "dtmi:standard:class:QuantitativeType;2",
+      "extensionKind": "SemanticType",
+      "extensionContext": "dtmi:dtdl:context;2",
+      "cotypes": [
+        "Telemetry",
+        "Property"
+      ],
+      "properties": {
+        "unit": {
+          "maxCount": 1,
+          "minCount": 1,
+          "plural": false,
+          "optional": false,
+          "type": "dtmi:standard:class:FrequencyUnit;2"
+        }
+      },
+      "constraints": []
+    },
+    "dtmi:standard:class:DataRateUnit;2": {
+      "abstract": false,
+      "parent": "dtmi:dtdl:class:Unit;2",
+      "extensionKind": "Unit",
+      "extensionContext": "dtmi:dtdl:context;2",
+      "cotypes": [],
+      "properties": {},
+      "constraints": []
+    },
+    "dtmi:standard:class:DataSizeUnit;2": {
+      "abstract": false,
+      "parent": "dtmi:dtdl:class:Unit;2",
+      "extensionKind": "Unit",
+      "extensionContext": "dtmi:dtdl:context;2",
+      "cotypes": [],
+      "properties": {},
+      "constraints": []
+    },
+    "dtmi:standard:class:Length;2": {
+      "abstract": false,
+      "parent": "dtmi:standard:class:QuantitativeType;2",
+      "extensionKind": "SemanticType",
+      "extensionContext": "dtmi:dtdl:context;2",
+      "cotypes": [
+        "Property",
+        "Telemetry"
+      ],
+      "properties": {
+        "unit": {
+          "maxCount": 1,
+          "minCount": 1,
+          "plural": false,
+          "optional": false,
+          "type": "dtmi:standard:class:LengthUnit;2"
+        }
+      },
+      "constraints": []
+    },
+    "dtmi:standard:class:Illuminance;2": {
+      "abstract": false,
+      "parent": "dtmi:standard:class:QuantitativeType;2",
+      "extensionKind": "SemanticType",
+      "extensionContext": "dtmi:dtdl:context;2",
+      "cotypes": [
+        "Property",
+        "Telemetry"
+      ],
+      "properties": {
+        "unit": {
+          "maxCount": 1,
+          "minCount": 1,
+          "plural": false,
+          "optional": false,
+          "type": "dtmi:standard:class:IlluminanceUnit;2"
+        }
+      },
+      "constraints": []
+    },
+    "dtmi:standard:class:LengthUnit;2": {
+      "abstract": false,
+      "parent": "dtmi:dtdl:class:Unit;2",
+      "extensionKind": "Unit",
+      "extensionContext": "dtmi:dtdl:context;2",
+      "cotypes": [],
+      "properties": {},
+      "constraints": []
+    },
+    "dtmi:standard:class:Inductance;2": {
+      "abstract": false,
+      "parent": "dtmi:standard:class:QuantitativeType;2",
+      "extensionKind": "SemanticType",
+      "extensionContext": "dtmi:dtdl:context;2",
+      "cotypes": [
+        "Property",
+        "Telemetry"
+      ],
+      "properties": {
+        "unit": {
+          "maxCount": 1,
+          "minCount": 1,
+          "plural": false,
+          "optional": false,
+          "type": "dtmi:standard:class:InductanceUnit;2"
+        }
+      },
+      "constraints": []
+    },
+    "dtmi:standard:class:FrequencyUnit;2": {
+      "abstract": false,
+      "parent": "dtmi:dtdl:class:Unit;2",
+      "extensionKind": "Unit",
+      "extensionContext": "dtmi:dtdl:context;2",
+      "cotypes": [],
+      "properties": {},
+      "constraints": []
+    },
+    "dtmi:standard:class:ChargeUnit;2": {
+      "abstract": false,
+      "parent": "dtmi:dtdl:class:Unit;2",
+      "extensionKind": "Unit",
+      "extensionContext": "dtmi:dtdl:context;2",
+      "cotypes": [],
+      "properties": {},
+      "constraints": []
+    },
+    "dtmi:standard:class:ForceUnit;2": {
+      "abstract": false,
+      "parent": "dtmi:dtdl:class:Unit;2",
+      "extensionKind": "Unit",
+      "extensionContext": "dtmi:dtdl:context;2",
+      "cotypes": [],
+      "properties": {},
+      "constraints": []
+    },
+    "dtmi:standard:class:Latitude;2": {
+      "abstract": false,
+      "parent": "dtmi:standard:class:QuantitativeType;2",
+      "extensionKind": "SemanticType",
+      "extensionContext": "dtmi:dtdl:context;2",
+      "cotypes": [
+        "Telemetry",
+        "Property"
+      ],
+      "properties": {
+        "unit": {
+          "maxCount": 1,
+          "minCount": 1,
+          "plural": false,
+          "optional": false,
+          "type": "dtmi:standard:class:AngleUnit;2"
+        }
+      },
+      "constraints": []
+    },
+    "dtmi:standard:class:Luminance;2": {
+      "abstract": false,
+      "parent": "dtmi:standard:class:QuantitativeType;2",
+      "extensionKind": "SemanticType",
+      "extensionContext": "dtmi:dtdl:context;2",
+      "cotypes": [
+        "Property",
+        "Telemetry"
+      ],
+      "properties": {
+        "unit": {
+          "maxCount": 1,
+          "minCount": 1,
+          "plural": false,
+          "optional": false,
+          "type": "dtmi:standard:class:LuminanceUnit;2"
+        }
+      },
+      "constraints": []
+    },
+    "dtmi:standard:class:LuminanceUnit;2": {
+      "abstract": false,
+      "parent": "dtmi:dtdl:class:Unit;2",
+      "extensionKind": "Unit",
+      "extensionContext": "dtmi:dtdl:context;2",
+      "cotypes": [],
+      "properties": {},
+      "constraints": []
+    },
+    "dtmi:standard:class:MagneticFlux;2": {
+      "abstract": false,
+      "parent": "dtmi:standard:class:QuantitativeType;2",
+      "extensionKind": "SemanticType",
+      "extensionContext": "dtmi:dtdl:context;2",
+      "cotypes": [
+        "Property",
+        "Telemetry"
+      ],
+      "properties": {
+        "unit": {
+          "maxCount": 1,
+          "minCount": 1,
+          "plural": false,
+          "optional": false,
+          "type": "dtmi:standard:class:MagneticFluxUnit;2"
+        }
+      },
+      "constraints": []
+    },
+    "dtmi:standard:class:Humidity;2": {
+      "abstract": false,
+      "parent": "dtmi:standard:class:QuantitativeType;2",
+      "extensionKind": "SemanticType",
+      "extensionContext": "dtmi:dtdl:context;2",
+      "cotypes": [
+        "Property",
+        "Telemetry"
+      ],
+      "properties": {
+        "unit": {
+          "maxCount": 1,
+          "minCount": 1,
+          "plural": false,
+          "optional": false,
+          "type": "dtmi:standard:class:DensityUnit;2"
+        }
+      },
+      "constraints": []
+    },
+    "dtmi:standard:class:Longitude;2": {
+      "abstract": false,
+      "parent": "dtmi:standard:class:QuantitativeType;2",
+      "extensionKind": "SemanticType",
+      "extensionContext": "dtmi:dtdl:context;2",
+      "cotypes": [
+        "Telemetry",
+        "Property"
+      ],
+      "properties": {
+        "unit": {
+          "maxCount": 1,
+          "minCount": 1,
+          "plural": false,
+          "optional": false,
+          "type": "dtmi:standard:class:AngleUnit;2"
+        }
+      },
+      "constraints": []
+    },
+    "dtmi:standard:class:InductanceUnit;2": {
+      "abstract": false,
+      "parent": "dtmi:dtdl:class:Unit;2",
+      "extensionKind": "Unit",
+      "extensionContext": "dtmi:dtdl:context;2",
+      "cotypes": [],
+      "properties": {},
+      "constraints": []
+    },
+    "dtmi:standard:class:LuminousIntensity;2": {
+      "abstract": false,
+      "parent": "dtmi:standard:class:QuantitativeType;2",
+      "extensionKind": "SemanticType",
+      "extensionContext": "dtmi:dtdl:context;2",
+      "cotypes": [
+        "Property",
+        "Telemetry"
+      ],
+      "properties": {
+        "unit": {
+          "maxCount": 1,
+          "minCount": 1,
+          "plural": false,
+          "optional": false,
+          "type": "dtmi:standard:class:LuminousIntensityUnit;2"
+        }
+      },
+      "constraints": []
+    },
+    "dtmi:standard:class:IlluminanceUnit;2": {
+      "abstract": false,
+      "parent": "dtmi:dtdl:class:Unit;2",
+      "extensionKind": "Unit",
+      "extensionContext": "dtmi:dtdl:context;2",
+      "cotypes": [],
+      "properties": {},
+      "constraints": []
+    },
+    "dtmi:standard:class:PowerUnit;2": {
+      "abstract": false,
+      "parent": "dtmi:dtdl:class:Unit;2",
+      "extensionKind": "Unit",
+      "extensionContext": "dtmi:dtdl:context;2",
+      "cotypes": [],
+      "properties": {},
+      "constraints": []
+    },
+    "dtmi:standard:class:LuminousFlux;2": {
+      "abstract": false,
+      "parent": "dtmi:standard:class:QuantitativeType;2",
+      "extensionKind": "SemanticType",
+      "extensionContext": "dtmi:dtdl:context;2",
+      "cotypes": [
+        "Telemetry",
+        "Property"
+      ],
+      "properties": {
+        "unit": {
+          "maxCount": 1,
+          "minCount": 1,
+          "plural": false,
+          "optional": false,
+          "type": "dtmi:standard:class:LuminousFluxUnit;2"
+        }
+      },
+      "constraints": []
+    },
+    "dtmi:standard:class:Pressure;2": {
+      "abstract": false,
+      "parent": "dtmi:standard:class:QuantitativeType;2",
+      "extensionKind": "SemanticType",
+      "extensionContext": "dtmi:dtdl:context;2",
+      "cotypes": [
+        "Property",
+        "Telemetry"
+      ],
+      "properties": {
+        "unit": {
+          "maxCount": 1,
+          "minCount": 1,
+          "plural": false,
+          "optional": false,
+          "type": "dtmi:standard:class:PressureUnit;2"
+        }
+      },
+      "constraints": []
+    },
+    "dtmi:standard:class:EnergyUnit;2": {
+      "abstract": false,
+      "parent": "dtmi:dtdl:class:Unit;2",
+      "extensionKind": "Unit",
+      "extensionContext": "dtmi:dtdl:context;2",
+      "cotypes": [],
+      "properties": {},
+      "constraints": []
+    },
+    "dtmi:standard:class:LuminousIntensityUnit;2": {
+      "abstract": false,
+      "parent": "dtmi:dtdl:class:Unit;2",
+      "extensionKind": "Unit",
+      "extensionContext": "dtmi:dtdl:context;2",
+      "cotypes": [],
+      "properties": {},
+      "constraints": []
+    },
+    "dtmi:standard:class:Mass;2": {
+      "abstract": false,
+      "parent": "dtmi:standard:class:QuantitativeType;2",
+      "extensionKind": "SemanticType",
+      "extensionContext": "dtmi:dtdl:context;2",
+      "cotypes": [
+        "Property",
+        "Telemetry"
+      ],
+      "properties": {
+        "unit": {
+          "maxCount": 1,
+          "minCount": 1,
+          "plural": false,
+          "optional": false,
+          "type": "dtmi:standard:class:MassUnit;2"
+        }
+      },
+      "constraints": []
+    },
+    "dtmi:standard:class:MagneticFluxUnit;2": {
+      "abstract": false,
+      "parent": "dtmi:dtdl:class:Unit;2",
+      "extensionKind": "Unit",
+      "extensionContext": "dtmi:dtdl:context;2",
+      "cotypes": [],
+      "properties": {},
+      "constraints": []
+    },
+    "dtmi:standard:class:Luminosity;2": {
+      "abstract": false,
+      "parent": "dtmi:standard:class:QuantitativeType;2",
+      "extensionKind": "SemanticType",
+      "extensionContext": "dtmi:dtdl:context;2",
+      "cotypes": [
+        "Telemetry",
+        "Property"
+      ],
+      "properties": {
+        "unit": {
+          "maxCount": 1,
+          "minCount": 1,
+          "plural": false,
+          "optional": false,
+          "type": "dtmi:standard:class:PowerUnit;2"
+        }
+      },
+      "constraints": []
+    },
+    "dtmi:standard:class:MagneticInductionUnit;2": {
+      "abstract": false,
+      "parent": "dtmi:dtdl:class:Unit;2",
+      "extensionKind": "Unit",
+      "extensionContext": "dtmi:dtdl:context;2",
+      "cotypes": [],
+      "properties": {},
+      "constraints": []
+    },
+    "dtmi:standard:class:Resistance;2": {
+      "abstract": false,
+      "parent": "dtmi:standard:class:QuantitativeType;2",
+      "extensionKind": "SemanticType",
+      "extensionContext": "dtmi:dtdl:context;2",
+      "cotypes": [
+        "Property",
+        "Telemetry"
+      ],
+      "properties": {
+        "unit": {
+          "maxCount": 1,
+          "minCount": 1,
+          "plural": false,
+          "optional": false,
+          "type": "dtmi:standard:class:ResistanceUnit;2"
+        }
+      },
+      "constraints": []
+    },
+    "dtmi:standard:class:RelativeHumidity;2": {
+      "abstract": false,
+      "parent": "dtmi:standard:class:QuantitativeType;2",
+      "extensionKind": "SemanticType",
+      "extensionContext": "dtmi:dtdl:context;2",
+      "cotypes": [
+        "Property",
+        "Telemetry"
+      ],
+      "properties": {
+        "unit": {
+          "maxCount": 1,
+          "minCount": 1,
+          "plural": false,
+          "optional": false,
+          "type": "dtmi:standard:class:Unitless;2"
+        }
+      },
+      "constraints": []
+    },
+    "dtmi:standard:class:Unitless;2": {
+      "abstract": false,
+      "parent": "dtmi:dtdl:class:Unit;2",
+      "extensionKind": "Unit",
+      "extensionContext": "dtmi:dtdl:context;2",
+      "cotypes": [],
+      "properties": {},
+      "constraints": []
+    },
+    "dtmi:standard:class:LuminousFluxUnit;2": {
+      "abstract": false,
+      "parent": "dtmi:dtdl:class:Unit;2",
+      "extensionKind": "Unit",
+      "extensionContext": "dtmi:dtdl:context;2",
+      "cotypes": [],
+      "properties": {},
+      "constraints": []
+    },
+    "dtmi:standard:class:Power;2": {
+      "abstract": false,
+      "parent": "dtmi:standard:class:QuantitativeType;2",
+      "extensionKind": "SemanticType",
+      "extensionContext": "dtmi:dtdl:context;2",
+      "cotypes": [
+        "Telemetry",
+        "Property"
+      ],
+      "properties": {
+        "unit": {
+          "maxCount": 1,
+          "minCount": 1,
+          "plural": false,
+          "optional": false,
+          "type": "dtmi:standard:class:PowerUnit;2"
+        }
+      },
+      "constraints": []
+    },
+    "dtmi:standard:class:MassUnit;2": {
+      "abstract": false,
+      "parent": "dtmi:dtdl:class:Unit;2",
+      "extensionKind": "Unit",
+      "extensionContext": "dtmi:dtdl:context;2",
+      "cotypes": [],
+      "properties": {},
+      "constraints": []
+    },
+    "dtmi:standard:class:MassFlowRate;2": {
+      "abstract": false,
+      "parent": "dtmi:standard:class:QuantitativeType;2",
+      "extensionKind": "SemanticType",
+      "extensionContext": "dtmi:dtdl:context;2",
+      "cotypes": [
+        "Property",
+        "Telemetry"
+      ],
+      "properties": {
+        "unit": {
+          "maxCount": 1,
+          "minCount": 1,
+          "plural": false,
+          "optional": false,
+          "type": "dtmi:standard:class:MassFlowRateUnit;2"
+        }
+      },
+      "constraints": []
+    },
+    "dtmi:standard:class:MassFlowRateUnit;2": {
+      "abstract": false,
+      "parent": "dtmi:dtdl:class:Unit;2",
+      "extensionKind": "Unit",
+      "extensionContext": "dtmi:dtdl:context;2",
+      "cotypes": [],
+      "properties": {},
+      "constraints": []
+    },
+    "dtmi:standard:class:PressureUnit;2": {
+      "abstract": false,
+      "parent": "dtmi:dtdl:class:Unit;2",
+      "extensionKind": "Unit",
+      "extensionContext": "dtmi:dtdl:context;2",
+      "cotypes": [],
+      "properties": {},
+      "constraints": []
+    },
+    "dtmi:standard:class:ResistanceUnit;2": {
+      "abstract": false,
+      "parent": "dtmi:dtdl:class:Unit;2",
+      "extensionKind": "Unit",
+      "extensionContext": "dtmi:dtdl:context;2",
+      "cotypes": [],
+      "properties": {},
+      "constraints": []
+    },
+    "dtmi:standard:class:SoundPressure;2": {
+      "abstract": false,
+      "parent": "dtmi:standard:class:QuantitativeType;2",
+      "extensionKind": "SemanticType",
+      "extensionContext": "dtmi:dtdl:context;2",
+      "cotypes": [
+        "Property",
+        "Telemetry"
+      ],
+      "properties": {
+        "unit": {
+          "maxCount": 1,
+          "minCount": 1,
+          "plural": false,
+          "optional": false,
+          "type": "dtmi:standard:class:SoundPressureUnit;2"
+        }
+      },
+      "constraints": []
+    },
+    "dtmi:standard:class:MagneticInduction;2": {
+      "abstract": false,
+      "parent": "dtmi:standard:class:QuantitativeType;2",
+      "extensionKind": "SemanticType",
+      "extensionContext": "dtmi:dtdl:context;2",
+      "cotypes": [
+        "Property",
+        "Telemetry"
+      ],
+      "properties": {
+        "unit": {
+          "maxCount": 1,
+          "minCount": 1,
+          "plural": false,
+          "optional": false,
+          "type": "dtmi:standard:class:MagneticInductionUnit;2"
+        }
+      },
+      "constraints": []
+    },
+    "dtmi:standard:class:VolumeUnit;2": {
+      "abstract": false,
+      "parent": "dtmi:dtdl:class:Unit;2",
+      "extensionKind": "Unit",
+      "extensionContext": "dtmi:dtdl:context;2",
+      "cotypes": [],
+      "properties": {},
+      "constraints": []
+    },
+    "dtmi:standard:class:SoundPressureUnit;2": {
+      "abstract": false,
+      "parent": "dtmi:dtdl:class:Unit;2",
+      "extensionKind": "Unit",
+      "extensionContext": "dtmi:dtdl:context;2",
+      "cotypes": [],
+      "properties": {},
+      "constraints": []
+    },
+    "dtmi:standard:class:TimeUnit;2": {
+      "abstract": false,
+      "parent": "dtmi:dtdl:class:Unit;2",
+      "extensionKind": "Unit",
+      "extensionContext": "dtmi:dtdl:context;2",
+      "cotypes": [],
+      "properties": {},
+      "constraints": []
+    },
+    "dtmi:standard:class:Temperature;2": {
+      "abstract": false,
+      "parent": "dtmi:standard:class:QuantitativeType;2",
+      "extensionKind": "SemanticType",
+      "extensionContext": "dtmi:dtdl:context;2",
+      "cotypes": [
+        "Telemetry",
+        "Property"
+      ],
+      "properties": {
+        "unit": {
+          "maxCount": 1,
+          "minCount": 1,
+          "plural": false,
+          "optional": false,
+          "type": "dtmi:standard:class:TemperatureUnit;2"
+        }
+      },
+      "constraints": []
+    },
+    "dtmi:standard:class:TemperatureUnit;2": {
+      "abstract": false,
+      "parent": "dtmi:dtdl:class:Unit;2",
+      "extensionKind": "Unit",
+      "extensionContext": "dtmi:dtdl:context;2",
+      "cotypes": [],
+      "properties": {},
+      "constraints": []
+    },
+    "dtmi:standard:class:Thrust;2": {
+      "abstract": false,
+      "parent": "dtmi:standard:class:QuantitativeType;2",
+      "extensionKind": "SemanticType",
+      "extensionContext": "dtmi:dtdl:context;2",
+      "cotypes": [
+        "Telemetry",
+        "Property"
+      ],
+      "properties": {
+        "unit": {
+          "maxCount": 1,
+          "minCount": 1,
+          "plural": false,
+          "optional": false,
+          "type": "dtmi:standard:class:ForceUnit;2"
+        }
+      },
+      "constraints": []
+    },
+    "dtmi:standard:class:Voltage;2": {
+      "abstract": false,
+      "parent": "dtmi:standard:class:QuantitativeType;2",
+      "extensionKind": "SemanticType",
+      "extensionContext": "dtmi:dtdl:context;2",
+      "cotypes": [
+        "Telemetry",
+        "Property"
+      ],
+      "properties": {
+        "unit": {
+          "maxCount": 1,
+          "minCount": 1,
+          "plural": false,
+          "optional": false,
+          "type": "dtmi:standard:class:VoltageUnit;2"
+        }
+      },
+      "constraints": []
+    },
+    "dtmi:standard:class:Velocity;2": {
+      "abstract": false,
+      "parent": "dtmi:standard:class:QuantitativeType;2",
+      "extensionKind": "SemanticType",
+      "extensionContext": "dtmi:dtdl:context;2",
+      "cotypes": [
+        "Property",
+        "Telemetry"
+      ],
+      "properties": {
+        "unit": {
+          "maxCount": 1,
+          "minCount": 1,
+          "plural": false,
+          "optional": false,
+          "type": "dtmi:standard:class:VelocityUnit;2"
+        }
+      },
+      "constraints": []
+    },
+    "dtmi:standard:class:VelocityUnit;2": {
+      "abstract": false,
+      "parent": "dtmi:dtdl:class:Unit;2",
+      "extensionKind": "Unit",
+      "extensionContext": "dtmi:dtdl:context;2",
+      "cotypes": [],
+      "properties": {},
+      "constraints": []
+    },
+    "dtmi:standard:class:VoltageUnit;2": {
+      "abstract": false,
+      "parent": "dtmi:dtdl:class:Unit;2",
+      "extensionKind": "Unit",
+      "extensionContext": "dtmi:dtdl:context;2",
+      "cotypes": [],
+      "properties": {},
+      "constraints": []
+    },
+    "dtmi:standard:class:VolumeFlowRate;2": {
+      "abstract": false,
+      "parent": "dtmi:standard:class:QuantitativeType;2",
+      "extensionKind": "SemanticType",
+      "extensionContext": "dtmi:dtdl:context;2",
+      "cotypes": [
+        "Property",
+        "Telemetry"
+      ],
+      "properties": {
+        "unit": {
+          "maxCount": 1,
+          "minCount": 1,
+          "plural": false,
+          "optional": false,
+          "type": "dtmi:standard:class:VolumeFlowRateUnit;2"
+        }
+      },
+      "constraints": []
+    },
+    "dtmi:standard:class:TimeSpan;2": {
+      "abstract": false,
+      "parent": "dtmi:standard:class:QuantitativeType;2",
+      "extensionKind": "SemanticType",
+      "extensionContext": "dtmi:dtdl:context;2",
+      "cotypes": [
+        "Property",
+        "Telemetry"
+      ],
+      "properties": {
+        "unit": {
+          "maxCount": 1,
+          "minCount": 1,
+          "plural": false,
+          "optional": false,
+          "type": "dtmi:standard:class:TimeUnit;2"
+        }
+      },
+      "constraints": []
+    },
+    "dtmi:standard:class:TorqueUnit;2": {
+      "abstract": false,
+      "parent": "dtmi:dtdl:class:Unit;2",
+      "extensionKind": "Unit",
+      "extensionContext": "dtmi:dtdl:context;2",
+      "cotypes": [],
+      "properties": {},
+      "constraints": []
+    },
+    "dtmi:standard:class:VolumeFlowRateUnit;2": {
+      "abstract": false,
+      "parent": "dtmi:dtdl:class:Unit;2",
+      "extensionKind": "Unit",
+      "extensionContext": "dtmi:dtdl:context;2",
+      "cotypes": [],
+      "properties": {},
+      "constraints": []
+    },
+    "dtmi:standard:class:Volume;2": {
+      "abstract": false,
+      "parent": "dtmi:standard:class:QuantitativeType;2",
+      "extensionKind": "SemanticType",
+      "extensionContext": "dtmi:dtdl:context;2",
+      "cotypes": [
+        "Property",
+        "Telemetry"
+      ],
+      "properties": {
+        "unit": {
+          "maxCount": 1,
+          "minCount": 1,
+          "plural": false,
+          "optional": false,
+          "type": "dtmi:standard:class:VolumeUnit;2"
+        }
+      },
+      "constraints": []
+    },
+    "dtmi:standard:class:Torque;2": {
+      "abstract": false,
+      "parent": "dtmi:standard:class:QuantitativeType;2",
+      "extensionKind": "SemanticType",
+      "extensionContext": "dtmi:dtdl:context;2",
+      "cotypes": [
+        "Telemetry",
+        "Property"
+      ],
+      "properties": {
+        "unit": {
+          "maxCount": 1,
+          "minCount": 1,
+          "plural": false,
+          "optional": false,
+          "type": "dtmi:standard:class:TorqueUnit;2"
+        }
+      },
+      "constraints": []
+    },
+    "dtmi:iotcentral:class:Event;2": {
+      "abstract": false,
+      "parent": "dtmi:dtdl:class:SemanticType;2",
+      "extensionKind": "SemanticType",
+      "extensionContext": "dtmi:iotcentral:context;2",
+      "cotypes": [
+        "Relationship",
+        "Telemetry",
+        "Property"
+      ],
+      "properties": {},
+      "constraints": [
+        {
+          "property": "schema",
+          "requiredTypes": [
+            "dtmi:dtdl:class:NumericSchema;2",
+            "dtmi:dtdl:class:String;2"
+          ],
+          "requiredTypesString": "NumericSchema or String"
+        }
+      ]
+    },
+    "dtmi:iotcentral:class:AccelerationVector;2": {
+      "abstract": false,
+      "parent": "dtmi:dtdl:class:SemanticType;2",
+      "extensionKind": "SemanticType",
+      "extensionContext": "dtmi:iotcentral:context;2",
+      "cotypes": [
+        "Relationship",
+        "Property",
+        "Telemetry"
+      ],
+      "properties": {
+        "unit": {
+          "maxCount": 1,
+          "plural": false,
+          "optional": true,
+          "type": "dtmi:standard:class:AccelerationUnit;2"
+        }
+      },
+      "constraints": [
+        {
+          "property": "schema",
+          "requiredValues": [
+            "dtmi:iotcentral:schema:vector;2"
+          ],
+          "requiredValuesString": "vector"
+        }
+      ]
+    },
+    "dtmi:iotcentral:class:State;2": {
+      "abstract": false,
+      "parent": "dtmi:dtdl:class:SemanticType;2",
+      "extensionKind": "SemanticType",
+      "extensionContext": "dtmi:iotcentral:context;2",
+      "cotypes": [
+        "Property",
+        "Telemetry",
+        "Relationship"
+      ],
+      "properties": {},
+      "constraints": [
+        {
+          "property": "schema",
+          "requiredTypes": [
+            "dtmi:dtdl:class:Enum;2"
+          ],
+          "requiredTypesString": "Enum"
+        }
+      ]
+    },
+    "dtmi:iotcentral:class:Location;2": {
+      "abstract": false,
+      "parent": "dtmi:dtdl:class:SemanticType;2",
+      "extensionKind": "SemanticType",
+      "extensionContext": "dtmi:iotcentral:context;2",
+      "cotypes": [
+        "Telemetry",
+        "Property",
+        "Relationship"
+      ],
+      "properties": {},
+      "constraints": [
+        {
+          "property": "schema",
+          "requiredValues": [
+            "dtmi:standard:schema:geospatial:point;2",
+            "dtmi:standard:schema:geospatial:multiPoint;2",
+            "dtmi:standard:schema:geospatial:lineString;2",
+            "dtmi:standard:schema:geospatial:multiLineString;2",
+            "dtmi:standard:schema:geospatial:polygon;2",
+            "dtmi:standard:schema:geospatial:multiPolygon;2"
+          ],
+          "requiredValuesString": "point or multiPoint or lineString or multiLineString or polygon or multiPolygon"
+        }
+      ]
+    },
+    "dtmi:iotcentral:class:VelocityVector;2": {
+      "abstract": false,
+      "parent": "dtmi:dtdl:class:SemanticType;2",
+      "extensionKind": "SemanticType",
+      "extensionContext": "dtmi:iotcentral:context;2",
+      "cotypes": [
+        "Relationship",
+        "Property",
+        "Telemetry"
+      ],
+      "properties": {
+        "unit": {
+          "maxCount": 1,
+          "plural": false,
+          "optional": true,
+          "type": "dtmi:standard:class:VelocityUnit;2"
+        }
+      },
+      "constraints": [
+        {
+          "property": "schema",
+          "requiredValues": [
+            "dtmi:iotcentral:schema:vector;2"
+          ],
+          "requiredValuesString": "vector"
+        }
+      ]
+    }
+  }
+}
